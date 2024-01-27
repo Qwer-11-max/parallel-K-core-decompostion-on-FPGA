@@ -24,7 +24,7 @@ events:
       The output was:
       0
       MSBuild version 17.4.1+9a89d02ff for .NET Framework
-      生成启动时间为 2024/1/27 12:00:09。
+      生成启动时间为 2024/1/27 22:54:05。
       节点 1 上的项目“D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\build\\CMakeFiles\\3.28.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj”(默认目标)。
       PrepareForBuild:
         正在创建目录“Debug\\”。
@@ -69,8 +69,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-pu4qr4"
-      binary: "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-pu4qr4"
+      source: "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-012sjc"
+      binary: "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-012sjc"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
@@ -79,37 +79,37 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-pu4qr4'
+        Change Dir: 'D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-012sjc'
         
-        Run Build Command(s): "D:/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_032ae.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "D:/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_58ead.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.4.1+9a89d02ff for .NET Framework
-        生成启动时间为 2024/1/27 12:00:11。
-        节点 1 上的项目“D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pu4qr4\\cmTC_032ae.vcxproj”(默认目标)。
+        生成启动时间为 2024/1/27 22:54:07。
+        节点 1 上的项目“D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\build\\CMakeFiles\\CMakeScratch\\TryCompile-012sjc\\cmTC_58ead.vcxproj”(默认目标)。
         PrepareForBuild:
-          正在创建目录“cmTC_032ae.dir\\Debug\\”。
-          正在创建目录“D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pu4qr4\\Debug\\”。
-          正在创建目录“cmTC_032ae.dir\\Debug\\cmTC_032ae.tlog\\”。
+          正在创建目录“cmTC_58ead.dir\\Debug\\”。
+          正在创建目录“D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\build\\CMakeFiles\\CMakeScratch\\TryCompile-012sjc\\Debug\\”。
+          正在创建目录“cmTC_58ead.dir\\Debug\\cmTC_58ead.tlog\\”。
         InitializeBuildStatus:
-          正在创建“cmTC_032ae.dir\\Debug\\cmTC_032ae.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+          正在创建“cmTC_58ead.dir\\Debug\\cmTC_58ead.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
         ClCompile:
-          D:\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_032ae.dir\\Debug\\\\" /Fd"cmTC_032ae.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "D:\\env\\Cmake2.28.1\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          D:\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_58ead.dir\\Debug\\\\" /Fd"cmTC_58ead.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "D:\\env\\Cmake2.28.1\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
           用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.34.31937 版
           CMakeCXXCompilerABI.cpp
           版权所有(C) Microsoft Corporation。保留所有权利。
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_032ae.dir\\Debug\\\\" /Fd"cmTC_032ae.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "D:\\env\\Cmake2.28.1\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_58ead.dir\\Debug\\\\" /Fd"cmTC_58ead.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "D:\\env\\Cmake2.28.1\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
         Link:
-          D:\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pu4qr4\\Debug\\cmTC_032ae.exe" /INCREMENTAL /ILK:"cmTC_032ae.dir\\Debug\\cmTC_032ae.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-pu4qr4/Debug/cmTC_032ae.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-pu4qr4/Debug/cmTC_032ae.lib" /MACHINE:X64  /machine:x64 cmTC_032ae.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_032ae.vcxproj -> D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pu4qr4\\Debug\\cmTC_032ae.exe
+          D:\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\build\\CMakeFiles\\CMakeScratch\\TryCompile-012sjc\\Debug\\cmTC_58ead.exe" /INCREMENTAL /ILK:"cmTC_58ead.dir\\Debug\\cmTC_58ead.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-012sjc/Debug/cmTC_58ead.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-012sjc/Debug/cmTC_58ead.lib" /MACHINE:X64  /machine:x64 cmTC_58ead.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_58ead.vcxproj -> D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\build\\CMakeFiles\\CMakeScratch\\TryCompile-012sjc\\Debug\\cmTC_58ead.exe
         FinalizeBuildStatus:
-          正在删除文件“cmTC_032ae.dir\\Debug\\cmTC_032ae.tlog\\unsuccessfulbuild”。
-          正在对“cmTC_032ae.dir\\Debug\\cmTC_032ae.tlog\\cmTC_032ae.lastbuildstate”执行 Touch 任务。
-        已完成生成项目“D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pu4qr4\\cmTC_032ae.vcxproj”(默认目标)的操作。
+          正在删除文件“cmTC_58ead.dir\\Debug\\cmTC_58ead.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_58ead.dir\\Debug\\cmTC_58ead.tlog\\cmTC_58ead.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\build\\CMakeFiles\\CMakeScratch\\TryCompile-012sjc\\cmTC_58ead.vcxproj”(默认目标)的操作。
         
         已成功生成。
             0 个警告
             0 个错误
         
-        已用时间 00:00:00.71
+        已用时间 00:00:00.73
         
       exitCode: 0
 ...
