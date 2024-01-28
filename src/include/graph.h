@@ -20,10 +20,10 @@ private:
     /*图的一些属性*/
     double          avgDeg;   //平均度
 
-    typedef bool(*p_ProcessGraphFunc)(std::string); //一个处理图的函数指针类型
+    typedef bool(*p_GraphProcessFunc)(std::string); //一个处理图的函数指针类型
     /* 处理图可能要用到的变量 */
-    p_ProcessGraphFunc p_processPrimitiveGraphLists[PROCESS_GRAPH_FUNC_ARRAY_SIZE]; //图处理函数列表
-    p_ProcessGraphFunc p_processGraph; //图处理函数指针
+    p_GraphProcessFunc p_processPrimitiveGraphLists[PROCESS_GRAPH_FUNC_ARRAY_SIZE]; //图处理函数列表
+    p_GraphProcessFunc p_processGraph; //图处理函数指针
 
 public:
     /* @param fileDir:要读取的文件位置*/
@@ -39,6 +39,6 @@ private:
     /*  @param  func:要插入的处理函数
         @return true:成功插入
         @return false:因为列表已满，插入失败。*/
-    bool InsertGraphProcess(p_ProcessGraphFunc func);
+    bool InsertGraphProcess(p_GraphProcessFunc func);
 
 };

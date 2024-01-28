@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cmake",
+			"label": "CMake",
+			"command": "configure",
+			"problemMatcher": [],
+			"detail": "CMake 模板 配置 任务",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"options" :{
+				"cwd": "${fileDirname}/build"
+			},
+		}
+	]
+}

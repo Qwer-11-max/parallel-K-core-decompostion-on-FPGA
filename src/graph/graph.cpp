@@ -13,7 +13,7 @@ Graph::~Graph()
     delete[] p_offset; 
 }
 
-bool Graph::InsertGraphProcess(p_ProcessGraphFunc func)
+bool Graph::InsertGraphProcess(p_GraphProcessFunc func)
 {
     for(int i=0;i<PROCESS_GRAPH_FUNC_ARRAY_SIZE;i++)
     {
