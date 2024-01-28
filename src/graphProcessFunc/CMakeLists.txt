@@ -1,0 +1,1 @@
+add_library(ProcessGraphFuncs STATIC graphProcessFunc_test.cpp)

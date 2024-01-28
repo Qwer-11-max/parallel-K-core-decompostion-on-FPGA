@@ -177,6 +177,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{9BB74C1B-032E-37C3-8BD5-96071448EF84}</Project>
       <Name>KCoreFPGA</Name>
     </ProjectReference>
+    <ProjectReference Include="D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\src\graphProcessFunc\ProcessGraphFuncs.vcxproj">
+      <Project>{3B345F88-E041-3DDC-8FF2-1D409FA72D1B}</Project>
+      <Name>ProcessGraphFuncs</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

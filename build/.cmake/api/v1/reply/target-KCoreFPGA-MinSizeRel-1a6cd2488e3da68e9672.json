@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "RelWithDebInfo/KCoreFPGA.exe"
+			"path" : "MinSizeRel/KCoreFPGA.exe"
 		},
 		{
-			"path" : "RelWithDebInfo/KCoreFPGA.pdb"
+			"path" : "MinSizeRel/KCoreFPGA.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -28,13 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 9,
+				"line" : 10,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 11,
+				"line" : 12,
 				"parent" : 0
 			}
 		]
@@ -45,7 +45,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob1 /DNDEBUG -MD -Zi"
+					"fragment" : "/DWIN32 /D_WINDOWS /EHsc /O1 /Ob1 /DNDEBUG -MD"
 				}
 			],
 			"includes" : 
@@ -78,11 +78,11 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob1 /DNDEBUG -MD -Zi",
+				"fragment" : "/DWIN32 /D_WINDOWS /EHsc /O1 /Ob1 /DNDEBUG -MD",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"fragment" : "/machine:x64 /INCREMENTAL:NO /subsystem:console",
 				"role" : "flags"
 			},
 			{

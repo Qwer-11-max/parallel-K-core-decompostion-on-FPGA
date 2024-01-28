@@ -20,6 +20,9 @@
 			"id" : "KCoreFPGA::@6890427a1f51a3e7e1df"
 		},
 		{
+			"id" : "ProcessGraphFuncs::@3b06999321d0e42d6c2c"
+		},
+		{
 			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		}
 	],
