@@ -8,14 +8,14 @@
             "name": "(gdb) 启动",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/build/Debug/KCoreFPGA.exe",
+            "program": "${workspaceFolder}/build/KCoreFPGA.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "D:/env/MinGW/bin/gdb.exe",
+            "miDebuggerPath": "D:/env/MinGW64_win32/mingw64/bin/gdb.exe",
             "setupCommands": [
                 {
                     "description": "为 gdb 启用整齐打印",
@@ -27,7 +27,8 @@
                     "text": "-gdb-set disassembly-flavor intel",
                     "ignoreFailures": true
                 }
-            ]
+            ],
+            "preLaunchTask": "CMake: 生成"
         }
 
     ]

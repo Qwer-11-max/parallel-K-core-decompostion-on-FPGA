@@ -1,16 +1,17 @@
 cmake_minimum_required(VERSION 3.28)
+project(KCoreFPGA VERSION 0.0.1 LANGUAGES C CXX)
 
-project(KCoreFPGA LANGUAGES CXX VERSION 0.0.1)
+include(CTest)
+enable_testing()
 
-set(CXX_STANDARD 11)
-set(CXX_STANDARD_REQUIRED TRUE)
-
-set(CMAKE_BUILD_TYPE Debug)
-# add_subdirectory(src/graphProcessFunc)
 configure_file(configure.h.in configure.h)
-add_executable(${PROJECT_NAME} main.cpp)
+include_directories(${PROJECT_SOURCE_DIR}/src/include)
+add_executable(KCoreFPGA main.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC
     "${PROJECT_BINARY_DIR}"
-    "${PROJECT_SOURCE_DIR}/src/include"
 )
+
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+include(CPack)
