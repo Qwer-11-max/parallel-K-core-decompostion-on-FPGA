@@ -98,9 +98,6 @@
 		},
 		{
 			"path" : "configure.h.in"
-		},
-		{
-			"path" : "src/graphProcessFunc/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",
