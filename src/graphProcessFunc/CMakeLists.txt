@@ -1,3 +1,6 @@
+#配置图处理函数库
 file(GLOB GRAPH_PROCESS_FUNC_SRC ${CMAKE_CURRENT_SOURCE_DIR}/graphProcessFunc_*.cpp)
-
-add_library(ProcessGraphFuncs STATIC ${GRAPH_PROCESS_FUNC_SRC})
+add_library(GraphProcessFuncs STATIC ${GRAPH_PROCESS_FUNC_SRC})
+target_include_directories(GraphProcessFuncs PUBLIC
+    "${PROJECT_BINARY_DIR}"
+)
