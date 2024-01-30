@@ -2,12 +2,12 @@
 
 Graph::Graph(std::string fileDir)
 {
+    if(!listInited) InitGraphProcessList();
 }
 
 Graph::~Graph()
 {
     delete[] p_degrees;
-    delete[] p_edges;
     delete[] p_offset;
 }
 
@@ -22,4 +22,8 @@ bool Graph::InsertGraphProcess(p_GraphProcessFunc func)
         }
     }
     return false;
+}
+
+bool Graph::InitGraphProcessList(){
+    InsertGraphProcess(GraphProcessFunc_NVE); //nve处理程序
 }

@@ -9,7 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/build/KCoreFPGA.exe",
-            "args": [],
+            "args": ["${workspaceFolder}/dataset/amazon0601.txt"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
