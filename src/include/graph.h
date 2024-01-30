@@ -48,6 +48,11 @@ private:
     /*  @return true:初始化成功
         @return false:初始化失败*/
     bool InitGraphProcessList();
+    /*  @return true: 成功读取处理后的图
+        @return false: 读取文件失败，该图还没有被处理*/
+    bool ReadProcessedGraph();
+    /* @return func:处理该文件所需要的图处理函数*/
+    p_GraphProcessFunc GetGraphProcessFunc();
 };
 
 bool Graph::listInited = false;

@@ -190,9 +190,6 @@
 		{
 			"isExternal" : true,
 			"path" : "D:/env/Cmake2.28.1/share/cmake-3.28/Templates/CPackConfig.cmake.in"
-		},
-		{
-			"path" : "src/graphProcessFuncs/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

@@ -80,13 +80,6 @@
 			]
 		}
 	],
-	"dependencies" : 
-	[
-		{
-			"backtrace" : 2,
-			"id" : "GraphProcessFuncs::@4e60520b84a24d4adf41"
-		}
-	],
 	"id" : "KCoreFPGA::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
@@ -102,7 +95,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "src\\graphProcessFuncs\\libGraphProcessFuncs.a",
+				"fragment" : "-lGraphProcessFuncs",
 				"role" : "libraries"
 			},
 			{

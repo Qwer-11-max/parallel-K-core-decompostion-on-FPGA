@@ -6,10 +6,6 @@
 			[
 				{
 					"build" : ".",
-					"childIndexes" : 
-					[
-						1
-					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
@@ -37,6 +33,7 @@
 						15,
 						16,
 						17,
+						18,
 						19,
 						20,
 						21,
@@ -46,23 +43,7 @@
 						25,
 						26,
 						27,
-						28,
-						29
-					]
-				},
-				{
-					"build" : "src/graphProcessFuncs",
-					"jsonFile" : "directory-src.graphProcessFuncs-Debug-7c20d86afbeac1925744.json",
-					"minimumCMakeVersion" : 
-					{
-						"string" : "3.28"
-					},
-					"parentIndex" : 0,
-					"projectIndex" : 0,
-					"source" : "src/graphProcessFuncs",
-					"targetIndexes" : 
-					[
-						18
+						28
 					]
 				}
 			],
@@ -72,8 +53,7 @@
 				{
 					"directoryIndexes" : 
 					[
-						0,
-						1
+						0
 					],
 					"name" : "KCoreFPGA",
 					"targetIndexes" : 
@@ -106,8 +86,7 @@
 						25,
 						26,
 						27,
-						28,
-						29
+						28
 					]
 				}
 			],
@@ -240,16 +219,9 @@
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 1,
-					"id" : "GraphProcessFuncs::@4e60520b84a24d4adf41",
-					"jsonFile" : "target-GraphProcessFuncs-Debug-31a4c5557a934b76c5b6.json",
-					"name" : "GraphProcessFuncs",
-					"projectIndex" : 0
-				},
-				{
 					"directoryIndex" : 0,
 					"id" : "KCoreFPGA::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-KCoreFPGA-Debug-b248fbfa22b63076ffee.json",
+					"jsonFile" : "target-KCoreFPGA-Debug-34c7146dc1965de6314c.json",
 					"name" : "KCoreFPGA",
 					"projectIndex" : 0
 				},
