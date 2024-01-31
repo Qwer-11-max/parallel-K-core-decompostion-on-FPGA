@@ -522,6 +522,32 @@ KCoreFPGA/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\KCoreFPGA.dir\build.make CMakeFiles/KCoreFPGA.dir/build
 .PHONY : KCoreFPGA/fast
 
+#=============================================================================
+# Target rules for targets named GraphProcessFuncs
+
+# Build rule for target.
+GraphProcessFuncs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 GraphProcessFuncs
+.PHONY : GraphProcessFuncs
+
+# fast build rule for target.
+GraphProcessFuncs/fast:
+	$(MAKE) $(MAKESILENT) -f src\graphProcessFuncs\CMakeFiles\GraphProcessFuncs.dir\build.make src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/build
+.PHONY : GraphProcessFuncs/fast
+
+#=============================================================================
+# Target rules for targets named Graph
+
+# Build rule for target.
+Graph: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Graph
+.PHONY : Graph
+
+# fast build rule for target.
+Graph/fast:
+	$(MAKE) $(MAKESILENT) -f src\graph\CMakeFiles\Graph.dir\build.make src/graph/CMakeFiles/Graph.dir/build
+.PHONY : Graph/fast
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -585,6 +611,8 @@ help:
 	@echo ... NightlySubmit
 	@echo ... NightlyTest
 	@echo ... NightlyUpdate
+	@echo ... Graph
+	@echo ... GraphProcessFuncs
 	@echo ... KCoreFPGA
 	@echo ... main.obj
 	@echo ... main.i

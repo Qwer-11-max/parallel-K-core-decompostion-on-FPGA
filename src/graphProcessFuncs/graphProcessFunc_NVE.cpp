@@ -48,6 +48,7 @@ bool GraphProcessFunc_NVE(std::string fileDir, unsigned int &vertex, unsigned in
     }
     (*p_degrees)[src] = degree;
     edge = edges.size();
+    fileIn.close();
     std::cout << "读取完毕，开始写入文件" << std::endl;
     /*=====将处理后的图分为三个文件存储，有助于之后的并行读取======*/
     std::string fileName = fileDir.substr(fileDir.find_last_of('/'), fileDir.find_last_of('.') - fileDir.find_last_of('/'));
@@ -62,13 +63,14 @@ bool GraphProcessFunc_NVE(std::string fileDir, unsigned int &vertex, unsigned in
         return false;
     }
     //======写入文件======
+    fileDegrees << vertex << std::endl;
     for (int i = 0; i < vertex; i++)
     {
         // std::cout << (*p_degrees)[i] << std::endl;
         fileDegrees << (*p_degrees)[i] << std::endl;
         fileOffset << (*p_offset)[i] << std::endl;
     }
-
+    fileEdge << edge << std::endl;
     for (int i = 0; i < edge; i++)
     {
         fileEdge << edges[i] << std::endl;
@@ -78,5 +80,9 @@ bool GraphProcessFunc_NVE(std::string fileDir, unsigned int &vertex, unsigned in
     std::cout << PROCESSED_GRAPH_DIR + fileName + "_Degrees.txt" << std::endl;
     std::cout << PROCESSED_GRAPH_DIR + fileName + "_Offset.txt" << std::endl;
     std::cout << PROCESSED_GRAPH_DIR + fileName + "_Edges.txt" << std::endl;
+    // 关闭文件
+    fileDegrees.close();
+    fileOffset.close();
+    fileEdge.close();
     return true;
 }

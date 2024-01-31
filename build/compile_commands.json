@@ -4,5 +4,17 @@
   "command": "D:\\env\\MinGW64_win32\\mingw64\\bin\\g++.exe  @CMakeFiles/KCoreFPGA.dir/includes_CXX.rsp -g -o CMakeFiles\\KCoreFPGA.dir\\main.cpp.obj -c D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\main.cpp",
   "file": "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/main.cpp",
   "output": "CMakeFiles/KCoreFPGA.dir/main.cpp.obj"
+},
+{
+  "directory": "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/src/graphProcessFuncs",
+  "command": "D:\\env\\MinGW64_win32\\mingw64\\bin\\g++.exe  @CMakeFiles/GraphProcessFuncs.dir/includes_CXX.rsp -g -o CMakeFiles\\GraphProcessFuncs.dir\\graphProcessFunc_NVE.cpp.obj -c D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\src\\graphProcessFuncs\\graphProcessFunc_NVE.cpp",
+  "file": "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/graphProcessFuncs/graphProcessFunc_NVE.cpp",
+  "output": "src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/graphProcessFunc_NVE.cpp.obj"
+},
+{
+  "directory": "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/src/graph",
+  "command": "D:\\env\\MinGW64_win32\\mingw64\\bin\\g++.exe  @CMakeFiles/Graph.dir/includes_CXX.rsp -g -o CMakeFiles\\Graph.dir\\graph.cpp.obj -c D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\src\\graph\\graph.cpp",
+  "file": "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/graph/graph.cpp",
+  "output": "src/graph/CMakeFiles/Graph.dir/graph.cpp.obj"
 }
 ]

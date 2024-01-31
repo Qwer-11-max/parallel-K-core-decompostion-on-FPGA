@@ -9,13 +9,16 @@ enable_testing()
 # 默认配置文件
 include_directories(${PROJECT_SOURCE_DIR}/src/include)
 configure_file(configure.h.in configure.h)
-
+add_subdirectory(src/graphProcessFuncs)
+add_subdirectory(src/graph)
 # KCoreFPGA项目配置
 add_executable(KCoreFPGA main.cpp)
 target_include_directories(KCoreFPGA PUBLIC
     "${PROJECT_BINARY_DIR}"
 )
-target_link_libraries(KCoreFPGA PUBLIC GraphProcessFuncs)
+target_link_libraries(KCoreFPGA PUBLIC
+    Graph
+)
 
 # 打包信息
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

@@ -63,10 +63,13 @@ CMAKE_BINARY_DIR = D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build
 
 # The main recursive "all" target.
 all: CMakeFiles/KCoreFPGA.dir/all
+all: src/graphProcessFuncs/all
+all: src/graph/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: src/graphProcessFuncs/preinstall
+preinstall: src/graph/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
@@ -99,7 +102,39 @@ clean: CMakeFiles/ContinuousCoverage.dir/clean
 clean: CMakeFiles/ContinuousMemCheck.dir/clean
 clean: CMakeFiles/ContinuousSubmit.dir/clean
 clean: CMakeFiles/KCoreFPGA.dir/clean
+clean: src/graphProcessFuncs/clean
+clean: src/graph/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory src/graph
+
+# Recursive "all" directory target.
+src/graph/all: src/graph/CMakeFiles/Graph.dir/all
+.PHONY : src/graph/all
+
+# Recursive "preinstall" directory target.
+src/graph/preinstall:
+.PHONY : src/graph/preinstall
+
+# Recursive "clean" directory target.
+src/graph/clean: src/graph/CMakeFiles/Graph.dir/clean
+.PHONY : src/graph/clean
+
+#=============================================================================
+# Directory level rules for directory src/graphProcessFuncs
+
+# Recursive "all" directory target.
+src/graphProcessFuncs/all: src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/all
+.PHONY : src/graphProcessFuncs/all
+
+# Recursive "preinstall" directory target.
+src/graphProcessFuncs/preinstall:
+.PHONY : src/graphProcessFuncs/preinstall
+
+# Recursive "clean" directory target.
+src/graphProcessFuncs/clean: src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/clean
+.PHONY : src/graphProcessFuncs/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Experimental.dir
@@ -833,15 +868,16 @@ CMakeFiles/ContinuousSubmit.dir/clean:
 # Target rules for target CMakeFiles/KCoreFPGA.dir
 
 # All Build rule for target.
-CMakeFiles/KCoreFPGA.dir/all:
+CMakeFiles/KCoreFPGA.dir/all: src/graph/CMakeFiles/Graph.dir/all
+CMakeFiles/KCoreFPGA.dir/all: src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\KCoreFPGA.dir\build.make CMakeFiles/KCoreFPGA.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\KCoreFPGA.dir\build.make CMakeFiles/KCoreFPGA.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\CMakeFiles --progress-num=1,2 "Built target KCoreFPGA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\CMakeFiles --progress-num=5,6 "Built target KCoreFPGA"
 .PHONY : CMakeFiles/KCoreFPGA.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/KCoreFPGA.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/KCoreFPGA.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\CMakeFiles 0
 .PHONY : CMakeFiles/KCoreFPGA.dir/rule
@@ -854,6 +890,58 @@ KCoreFPGA: CMakeFiles/KCoreFPGA.dir/rule
 CMakeFiles/KCoreFPGA.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\KCoreFPGA.dir\build.make CMakeFiles/KCoreFPGA.dir/clean
 .PHONY : CMakeFiles/KCoreFPGA.dir/clean
+
+#=============================================================================
+# Target rules for target src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir
+
+# All Build rule for target.
+src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/all:
+	$(MAKE) $(MAKESILENT) -f src\graphProcessFuncs\CMakeFiles\GraphProcessFuncs.dir\build.make src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/depend
+	$(MAKE) $(MAKESILENT) -f src\graphProcessFuncs\CMakeFiles\GraphProcessFuncs.dir\build.make src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\CMakeFiles --progress-num=3,4 "Built target GraphProcessFuncs"
+.PHONY : src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/all
+
+# Build rule for subdir invocation for target.
+src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\CMakeFiles 0
+.PHONY : src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/rule
+
+# Convenience name for target.
+GraphProcessFuncs: src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/rule
+.PHONY : GraphProcessFuncs
+
+# clean rule for target.
+src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src\graphProcessFuncs\CMakeFiles\GraphProcessFuncs.dir\build.make src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/clean
+.PHONY : src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/clean
+
+#=============================================================================
+# Target rules for target src/graph/CMakeFiles/Graph.dir
+
+# All Build rule for target.
+src/graph/CMakeFiles/Graph.dir/all: src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/all
+	$(MAKE) $(MAKESILENT) -f src\graph\CMakeFiles\Graph.dir\build.make src/graph/CMakeFiles/Graph.dir/depend
+	$(MAKE) $(MAKESILENT) -f src\graph\CMakeFiles\Graph.dir\build.make src/graph/CMakeFiles/Graph.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\CMakeFiles --progress-num=1,2 "Built target Graph"
+.PHONY : src/graph/CMakeFiles/Graph.dir/all
+
+# Build rule for subdir invocation for target.
+src/graph/CMakeFiles/Graph.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/graph/CMakeFiles/Graph.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\CMakeFiles 0
+.PHONY : src/graph/CMakeFiles/Graph.dir/rule
+
+# Convenience name for target.
+Graph: src/graph/CMakeFiles/Graph.dir/rule
+.PHONY : Graph
+
+# clean rule for target.
+src/graph/CMakeFiles/Graph.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src\graph\CMakeFiles\Graph.dir\build.make src/graph/CMakeFiles/Graph.dir/clean
+.PHONY : src/graph/CMakeFiles/Graph.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
