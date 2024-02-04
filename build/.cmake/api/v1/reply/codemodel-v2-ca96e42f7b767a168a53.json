@@ -9,8 +9,10 @@
 					"childIndexes" : 
 					[
 						1,
-						2
+						2,
+						3
 					],
+					"hasInstallRule" : true,
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
@@ -38,7 +40,6 @@
 						15,
 						16,
 						17,
-						20,
 						21,
 						22,
 						23,
@@ -48,7 +49,8 @@
 						27,
 						28,
 						29,
-						30
+						30,
+						31
 					]
 				},
 				{
@@ -63,12 +65,13 @@
 					"source" : "src/graphProcessFuncs",
 					"targetIndexes" : 
 					[
-						19
+						20
 					]
 				},
 				{
 					"build" : "src/graph",
-					"jsonFile" : "directory-src.graph-Debug-845f2d5f5f97891e5399.json",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.graph-Debug-b594caf215b73e96cdb2.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.28"
@@ -76,6 +79,22 @@
 					"parentIndex" : 0,
 					"projectIndex" : 0,
 					"source" : "src/graph",
+					"targetIndexes" : 
+					[
+						19
+					]
+				},
+				{
+					"build" : "src/fileOperations",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.fileOperations-Debug-67b2c2ff0efd8f60659f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/fileOperations",
 					"targetIndexes" : 
 					[
 						18
@@ -90,7 +109,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					],
 					"name" : "KCoreFPGA",
 					"targetIndexes" : 
@@ -125,7 +145,8 @@
 						27,
 						28,
 						29,
-						30
+						30,
+						31
 					]
 				}
 			],
@@ -258,9 +279,16 @@
 					"projectIndex" : 0
 				},
 				{
+					"directoryIndex" : 3,
+					"id" : "FileOperations::@e161aabff11ece94d0c5",
+					"jsonFile" : "target-FileOperations-Debug-fe2ae945e6d3d6fba6b9.json",
+					"name" : "FileOperations",
+					"projectIndex" : 0
+				},
+				{
 					"directoryIndex" : 2,
 					"id" : "Graph::@ac88e395dda6631a5a41",
-					"jsonFile" : "target-Graph-Debug-7d40bd9a918d4122907a.json",
+					"jsonFile" : "target-Graph-Debug-9ae66c9f2fa14147e908.json",
 					"name" : "Graph",
 					"projectIndex" : 0
 				},
@@ -274,7 +302,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "KCoreFPGA::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-KCoreFPGA-Debug-ccf2708700b8780e2c3b.json",
+					"jsonFile" : "target-KCoreFPGA-Debug-cfe5fdd675c72622a24a.json",
 					"name" : "KCoreFPGA",
 					"projectIndex" : 0
 				},

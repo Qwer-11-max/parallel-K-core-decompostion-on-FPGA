@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <pthread.h>
 
 #include "configure.h"
 #include "graph.h"
@@ -16,7 +17,6 @@ int main(int argc, char *argv[])
     }
     std::string fileDir(argv[1]);
     
-    Graph grh(fileDir);
-    
+    Graph grh(fileDir,true);
     return 0;
 }

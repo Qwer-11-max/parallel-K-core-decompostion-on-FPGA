@@ -32,15 +32,16 @@ private:
     bool processFailed;                                                              // 图像处理是否失败
 
 public:
-    /* @param fileDir:要读取的文件位置*/
-    Graph(std::string fileDir);
-    /* @return vertex:图的度数*/
+    /*  @param fileDir:要读取的文件位置
+        @param initGraph:是否强制处理图 */
+    Graph(std::string fileDir,bool initGraph = false);
+    /*  @return vertex:图的度数*/
     unsigned int GetVertex() const { return vertex; };
-    /* @return vertex:图的边数*/
+    /*  @return vertex:图的边数*/
     unsigned int GetEdge() const { return edge; };
-    /* @return vertex:图的平均度*/
+    /*  @return vertex:图的平均度*/
     unsigned int GetAvgDeg() const { return avgDeg; };
-    /* @return processFailed:图像处理是否失败*/
+    /*  @return processFailed:图像处理是否失败*/
     bool GetProcessResult() const { return processFailed; };
     ~Graph();
 
@@ -77,9 +78,8 @@ private:
             return p_graphProcessFuncList[hash[fileType]];
         else
         {
-            std::cout << "没有处理"+fileType+"的函数，请更换文件或编写处理该文件的函数"<<std::endl;
+            std::cout << "没有处理" + fileType + "的函数，请更换文件或编写处理该文件的函数" << std::endl;
             return nullptr;
-
         }
     }
 };

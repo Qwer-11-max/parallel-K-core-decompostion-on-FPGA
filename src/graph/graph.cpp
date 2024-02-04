@@ -1,16 +1,17 @@
 #include "graph.h"
+#include "fileOperations.h"
 
 bool Graph::listInited = false;
 Graph::p_GraphProcessFunc Graph::p_graphProcessFuncList[PROCESS_GRAPH_FUNC_ARRAY_SIZE] = {nullptr};
 std::map<std::string, int> Graph::hash;
 
-Graph::Graph(std::string fileDir) : processFailed(false)
+Graph::Graph(std::string fileDir, bool initGraph) : processFailed(false)
 {
     // 加载图处理函数
     if (!listInited)
         InitGraphProcessList();
     // 判断该图是否已被处理，如果已被处理就直接读取并返回
-    if (ReadProcessedGraph(fileDir))
+    if (!initGraph && ParallelReadStdGraph(fileDir, vertex, edge, &p_degrees, &p_offset, edges))
         return;
     // 获取图的处理函数
     p_GraphProcessFunc func = GetGraphProcessFunc(fileDir);

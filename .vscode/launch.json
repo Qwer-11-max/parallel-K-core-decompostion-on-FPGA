@@ -9,10 +9,17 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/build/KCoreFPGA.exe",
-            "args": ["${workspaceFolder}/dataset/amazon0601.nve"],
+            "args": [
+                "${workspaceFolder}/dataset/amazon0601.nve"
+            ],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
-            "environment": [],
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "D:/env/MinGW64_win32/mingw64/bin"
+                }
+            ],
             "externalConsole": false,
             "MIMode": "gdb",
             "miDebuggerPath": "D:/env/MinGW64_win32/mingw64/bin/gdb.exe",
@@ -30,6 +37,5 @@
             ],
             "preLaunchTask": "CMake: 生成"
         }
-
     ]
 }

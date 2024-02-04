@@ -11,6 +11,12 @@ include_directories(${PROJECT_SOURCE_DIR}/src/include)
 configure_file(configure.h.in configure.h)
 add_subdirectory(src/graphProcessFuncs)
 add_subdirectory(src/graph)
+add_subdirectory(src/fileOperations)
+
+# 设置编译flags
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 # KCoreFPGA项目配置
 add_executable(KCoreFPGA main.cpp)
 target_include_directories(KCoreFPGA PUBLIC

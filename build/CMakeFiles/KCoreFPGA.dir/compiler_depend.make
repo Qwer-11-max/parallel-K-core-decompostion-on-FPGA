@@ -3,10 +3,10 @@
 
 CMakeFiles/KCoreFPGA.dir/main.cpp.obj: D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/main.cpp \
   configure.h \
+  D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/include/fileOperations.h \
   D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/include/graph.h \
   D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/include/graphProcessFunc.h \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/backward/binders.h \
-  D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bit \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/alloc_traits.h \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/allocator.h \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_ios.h \
@@ -36,12 +36,10 @@ CMakeFiles/KCoreFPGA.dir/main.cpp.obj: D:/CodeRepository/parallel-K-core-decompo
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/locale_facets.h \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/locale_facets.tcc \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/localefwd.h \
-  D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/memory_resource.h \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/memoryfwd.h \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/move.h \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/nested_exception.h \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/new_allocator.h \
-  D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/node_handle.h \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ostream.tcc \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ostream_insert.h \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/postypes.h \
@@ -66,16 +64,13 @@ CMakeFiles/KCoreFPGA.dir/main.cpp.obj: D:/CodeRepository/parallel-K-core-decompo
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_vector.h \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/streambuf.tcc \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/streambuf_iterator.h \
-  D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/string_view.tcc \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stringfwd.h \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uses_allocator.h \
-  D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uses_allocator_args.h \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/utility.h \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/vector.tcc \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cctype \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cerrno \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/clocale \
-  D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstddef \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdio \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdlib \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cwchar \
@@ -98,12 +93,10 @@ CMakeFiles/KCoreFPGA.dir/main.cpp.obj: D:/CodeRepository/parallel-K-core-decompo
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/map \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/new \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ostream \
-  D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/pstl_config.h \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stdexcept \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stdlib.h \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/streambuf \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/string \
-  D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/string_view \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/system_error \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/tuple \
   D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/type_traits \
@@ -131,7 +124,9 @@ CMakeFiles/KCoreFPGA.dir/main.cpp.obj: D:/CodeRepository/parallel-K-core-decompo
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+  D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/_timeval.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+  D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/corecrt_startup.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
@@ -140,20 +135,31 @@ CMakeFiles/KCoreFPGA.dir/main.cpp.obj: D:/CodeRepository/parallel-K-core-decompo
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/limits.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/locale.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/malloc.h \
+  D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/process.h \
+  D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/pthread.h \
+  D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/pthread_compat.h \
+  D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/pthread_signal.h \
+  D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/pthread_time.h \
+  D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/pthread_unistd.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+  D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/signal.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/stddef.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/stdio.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/sys/timeb.h \
+  D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/sys/types.h \
+  D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/time.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/vadefs.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/wchar.h \
   D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/wctype.h
 
+
+D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/sys/types.h:
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/allocator.h:
 
@@ -165,6 +171,8 @@ D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/main.cpp:
 
 configure.h:
 
+D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/include/fileOperations.h:
+
 D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/include/graph.h:
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ostream.tcc:
@@ -174,10 +182,6 @@ D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/backward/binders.h:
 
 D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/include/graphProcessFunc.h:
-
-D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/numeric_traits.h:
-
-D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bit:
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/alloc_traits.h:
 
@@ -190,6 +194,8 @@ D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/basic_string.h:
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/ptr_traits.h:
+
+D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/streambuf_iterator.h:
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_algobase.h:
 
@@ -263,8 +269,6 @@ D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/localefwd.h:
 
-D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/memory_resource.h:
-
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stl_bvector.h:
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/move.h:
@@ -273,11 +277,13 @@ D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/nested_exception.h:
 
-D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/node_handle.h:
+D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/pthread_signal.h:
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/postypes.h:
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/refwrap.h:
+
+D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stringfwd.h:
 
 D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h:
 
@@ -299,14 +305,6 @@ D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/streambuf.tcc:
 
-D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/streambuf_iterator.h:
-
-D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/string_view.tcc:
-
-D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/stringfwd.h:
-
-D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/uses_allocator_args.h:
-
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/utility.h:
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/vector.tcc:
@@ -316,8 +314,6 @@ D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_6
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cctype:
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cerrno:
-
-D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstddef:
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/cstdio:
 
@@ -340,6 +336,8 @@ D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/excep
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/aligned_buffer.h:
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/atomicity.h:
+
+D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/numeric_traits.h:
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ext/string_conversions.h:
 
@@ -365,15 +363,11 @@ D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_6
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ostream:
 
-D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/pstl/pstl_config.h:
-
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stdexcept:
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/stdlib.h:
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/streambuf:
-
-D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/string_view:
 
 D:/env/MinGW64_win32/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/system_error:
 
@@ -425,7 +419,11 @@ D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h:
 
 D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h:
 
+D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/_timeval.h:
+
 D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/corecrt.h:
+
+D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/corecrt_startup.h:
 
 D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h:
 
@@ -441,17 +439,31 @@ D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/limits.h:
 
 D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/locale.h:
 
+D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/process.h:
+
+D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/pthread.h:
+
+D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/pthread_compat.h:
+
+D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/pthread_time.h:
+
+D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/pthread_unistd.h:
+
 D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h:
 
 D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h:
 
 D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h:
 
+D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/signal.h:
+
 D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/stddef.h:
 
 D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/stdio.h:
 
 D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/stdlib.h:
+
+D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/time.h:
 
 D:/env/MinGW64_win32/mingw64/x86_64-w64-mingw32/include/vadefs.h:
 

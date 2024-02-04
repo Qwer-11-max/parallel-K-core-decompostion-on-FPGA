@@ -6,3 +6,4 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("src/graphProcessFuncs")
 subdirs("src/graph")
+subdirs("src/fileOperations")

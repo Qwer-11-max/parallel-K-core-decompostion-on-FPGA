@@ -1,7 +1,7 @@
 [
 {
   "directory": "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build",
-  "command": "D:\\env\\MinGW64_win32\\mingw64\\bin\\g++.exe  @CMakeFiles/KCoreFPGA.dir/includes_CXX.rsp -g -o CMakeFiles\\KCoreFPGA.dir\\main.cpp.obj -c D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\main.cpp",
+  "command": "D:\\env\\MinGW64_win32\\mingw64\\bin\\g++.exe  @CMakeFiles/KCoreFPGA.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\KCoreFPGA.dir\\main.cpp.obj -c D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\main.cpp",
   "file": "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/main.cpp",
   "output": "CMakeFiles/KCoreFPGA.dir/main.cpp.obj"
 },
@@ -16,5 +16,11 @@
   "command": "D:\\env\\MinGW64_win32\\mingw64\\bin\\g++.exe  @CMakeFiles/Graph.dir/includes_CXX.rsp -g -o CMakeFiles\\Graph.dir\\graph.cpp.obj -c D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\src\\graph\\graph.cpp",
   "file": "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/graph/graph.cpp",
   "output": "src/graph/CMakeFiles/Graph.dir/graph.cpp.obj"
+},
+{
+  "directory": "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/src/fileOperations",
+  "command": "D:\\env\\MinGW64_win32\\mingw64\\bin\\g++.exe  @CMakeFiles/FileOperations.dir/includes_CXX.rsp -g -o CMakeFiles\\FileOperations.dir\\fileOperations.cpp.obj -c D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\src\\fileOperations\\fileOperations.cpp",
+  "file": "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/fileOperations/fileOperations.cpp",
+  "output": "src/fileOperations/CMakeFiles/FileOperations.dir/fileOperations.cpp.obj"
 }
 ]

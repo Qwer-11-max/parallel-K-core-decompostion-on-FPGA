@@ -590,3 +590,125 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "CMakeLists.txt:20 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-8oo6dv"
+      binary: "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-8oo6dv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-8oo6dv'
+        
+        Run Build Command(s): D:/env/Cmake2.28.1/bin/cmake.exe -E env VERBOSE=1 D:/env/MinGW64_win32/mingw64/bin/mingw32-make.exe -f Makefile cmTC_a4143/fast
+        D:/env/MinGW64_win32/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_a4143.dir\\build.make CMakeFiles/cmTC_a4143.dir/build
+        mingw32-make[1]: Entering directory 'D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-8oo6dv'
+        Building C object CMakeFiles/cmTC_a4143.dir/src.c.obj
+        D:\\env\\MinGW64_win32\\mingw64\\bin\\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles\\cmTC_a4143.dir\\src.c.obj -c D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8oo6dv\\src.c
+        Linking C executable cmTC_a4143.exe
+        D:\\env\\Cmake2.28.1\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_a4143.dir\\link.txt --verbose=1
+        D:\\env\\Cmake2.28.1\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_a4143.dir/objects.a
+        D:\\env\\MinGW64_win32\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_a4143.dir/objects.a @CMakeFiles\\cmTC_a4143.dir\\objects1.rsp
+        D:\\env\\MinGW64_win32\\mingw64\\bin\\gcc.exe -Wl,--whole-archive CMakeFiles\\cmTC_a4143.dir/objects.a -Wl,--no-whole-archive -o cmTC_a4143.exe -Wl,--out-implib,libcmTC_a4143.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_a4143.dir\\linkLibs.rsp
+        D:/env/MinGW64_win32/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles\\cmTC_a4143.dir/objects.a(src.c.obj):src.c:(.text+0x35): undefined reference to `pthread_create'
+        D:/env/MinGW64_win32/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles\\cmTC_a4143.dir/objects.a(src.c.obj):src.c:(.text+0x41): undefined reference to `pthread_detach'
+        D:/env/MinGW64_win32/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles\\cmTC_a4143.dir/objects.a(src.c.obj):src.c:(.text+0x4d): undefined reference to `pthread_cancel'
+        D:/env/MinGW64_win32/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles\\cmTC_a4143.dir/objects.a(src.c.obj):src.c:(.text+0x5e): undefined reference to `pthread_join'
+        D:/env/MinGW64_win32/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles\\cmTC_a4143.dir/objects.a(src.c.obj):src.c:(.text+0x68): undefined reference to `pthread_exit'
+        collect2.exe: error: ld returned 1 exit status
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_a4143.dir\\build.make:100: cmTC_a4143.exe] Error 1
+        mingw32-make[1]: Leaving directory 'D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-8oo6dv'
+        mingw32-make: *** [Makefile:126: cmTC_a4143/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "CMakeLists.txt:20 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-a1efhf"
+      binary: "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-a1efhf"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-a1efhf'
+        
+        Run Build Command(s): D:/env/Cmake2.28.1/bin/cmake.exe -E env VERBOSE=1 D:/env/MinGW64_win32/mingw64/bin/mingw32-make.exe -f Makefile cmTC_02971/fast
+        D:/env/MinGW64_win32/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_02971.dir\\build.make CMakeFiles/cmTC_02971.dir/build
+        mingw32-make[1]: Entering directory 'D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-a1efhf'
+        Building C object CMakeFiles/cmTC_02971.dir/CheckFunctionExists.c.obj
+        D:\\env\\MinGW64_win32\\mingw64\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles\\cmTC_02971.dir\\CheckFunctionExists.c.obj -c D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a1efhf\\CheckFunctionExists.c
+        Linking C executable cmTC_02971.exe
+        D:\\env\\Cmake2.28.1\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_02971.dir\\link.txt --verbose=1
+        D:\\env\\Cmake2.28.1\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_02971.dir/objects.a
+        D:\\env\\MinGW64_win32\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_02971.dir/objects.a @CMakeFiles\\cmTC_02971.dir\\objects1.rsp
+        D:\\env\\MinGW64_win32\\mingw64\\bin\\gcc.exe  -DCHECK_FUNCTION_EXISTS=pthread_create -Wl,--whole-archive CMakeFiles\\cmTC_02971.dir/objects.a -Wl,--no-whole-archive -o cmTC_02971.exe -Wl,--out-implib,libcmTC_02971.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_02971.dir\\linkLibs.rsp
+        D:/env/MinGW64_win32/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find -lpthreads: No such file or directory
+        collect2.exe: error: ld returned 1 exit status
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_02971.dir\\build.make:100: cmTC_02971.exe] Error 1
+        mingw32-make[1]: Leaving directory 'D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-a1efhf'
+        mingw32-make: *** [Makefile:126: cmTC_02971/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "CMakeLists.txt:20 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-l7ktq9"
+      binary: "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-l7ktq9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-l7ktq9'
+        
+        Run Build Command(s): D:/env/Cmake2.28.1/bin/cmake.exe -E env VERBOSE=1 D:/env/MinGW64_win32/mingw64/bin/mingw32-make.exe -f Makefile cmTC_d7a57/fast
+        D:/env/MinGW64_win32/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_d7a57.dir\\build.make CMakeFiles/cmTC_d7a57.dir/build
+        mingw32-make[1]: Entering directory 'D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-l7ktq9'
+        Building C object CMakeFiles/cmTC_d7a57.dir/CheckFunctionExists.c.obj
+        D:\\env\\MinGW64_win32\\mingw64\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles\\cmTC_d7a57.dir\\CheckFunctionExists.c.obj -c D:\\CodeRepository\\parallel-K-core-decompostion-on-FPGA\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l7ktq9\\CheckFunctionExists.c
+        Linking C executable cmTC_d7a57.exe
+        D:\\env\\Cmake2.28.1\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_d7a57.dir\\link.txt --verbose=1
+        D:\\env\\Cmake2.28.1\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_d7a57.dir/objects.a
+        D:\\env\\MinGW64_win32\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_d7a57.dir/objects.a @CMakeFiles\\cmTC_d7a57.dir\\objects1.rsp
+        D:\\env\\MinGW64_win32\\mingw64\\bin\\gcc.exe  -DCHECK_FUNCTION_EXISTS=pthread_create -Wl,--whole-archive CMakeFiles\\cmTC_d7a57.dir/objects.a -Wl,--no-whole-archive -o cmTC_d7a57.exe -Wl,--out-implib,libcmTC_d7a57.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_d7a57.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/CMakeFiles/CMakeScratch/TryCompile-l7ktq9'
+        
+      exitCode: 0
+...

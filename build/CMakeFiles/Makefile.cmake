@@ -13,6 +13,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.28.1/CMakeRCCompiler.cmake"
   "CMakeFiles/3.28.1/CMakeSystem.cmake"
   "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/configure.h.in"
+  "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/fileOperations/CMakeLists.txt"
   "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/graph/CMakeLists.txt"
   "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/graphProcessFuncs/CMakeLists.txt"
   "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/CMakeCInformation.cmake"
@@ -29,11 +30,18 @@ set(CMAKE_MAKEFILE_DEPENDS
   "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/CTest.cmake"
   "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/CTestTargets.cmake"
   "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/CTestUseLaunchers.cmake"
+  "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake"
+  "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/CheckIncludeFile.cmake"
+  "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/CheckLibraryExists.cmake"
   "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/Compiler/GNU-C.cmake"
   "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake"
   "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/Compiler/GNU.cmake"
   "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/DartConfiguration.tcl.in"
+  "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake"
+  "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/FindPackageMessage.cmake"
+  "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/FindThreads.cmake"
+  "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake"
   "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake"
   "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake"
   "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake"
@@ -61,6 +69,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/graphProcessFuncs/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/graph/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/fileOperations/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -96,4 +105,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/KCoreFPGA.dir/DependInfo.cmake"
   "src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/DependInfo.cmake"
   "src/graph/CMakeFiles/Graph.dir/DependInfo.cmake"
+  "src/fileOperations/CMakeFiles/FileOperations.dir/DependInfo.cmake"
   )
