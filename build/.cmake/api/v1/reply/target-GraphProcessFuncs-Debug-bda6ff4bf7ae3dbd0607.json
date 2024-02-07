@@ -12,6 +12,7 @@
 		"commands" : 
 		[
 			"add_library",
+			"install",
 			"include_directories",
 			"target_include_directories"
 		],
@@ -32,16 +33,22 @@
 				"parent" : 0
 			},
 			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
 				"file" : 1
 			},
 			{
-				"command" : 1,
+				"command" : 2,
 				"file" : 1,
 				"line" : 10,
-				"parent" : 2
+				"parent" : 3
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 4,
 				"parent" : 0
@@ -60,11 +67,11 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/include"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build"
 				}
 			],
@@ -76,6 +83,20 @@
 		}
 	],
 	"id" : "GraphProcessFuncs::@4e60520b84a24d4adf41",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "C:/Program Files (x86)/KCoreFPGA"
+		}
+	},
 	"name" : "GraphProcessFuncs",
 	"nameOnDisk" : "libGraphProcessFuncs.a",
 	"paths" : 

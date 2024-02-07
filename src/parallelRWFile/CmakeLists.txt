@@ -1,0 +1,15 @@
+find_package(Threads)
+
+add_library(ParallelRWFile STATIC parallelRWFile.cpp)
+
+target_include_directories(ParallelRWFile PUBLIC
+    "${PROJECT_BINARY_DIR}"
+    "${PROJECT_SOURCE_DIR}/src/include"
+)
+
+target_link_libraries(ParallelRWFile
+    "${CMAKE_THREAD_LIBS_INIT}"
+)
+
+install(TARGETS ParallelRWFile DESTINATION ${PROJECT_SOURCE_DIR}/lib)
+install(FILES ${PROJECT_SOURCE_DIR}/src/include/parallelRWFile.h DESTINATION ${PROJECT_SOURCE_DIR}/include)

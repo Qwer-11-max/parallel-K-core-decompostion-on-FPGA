@@ -1,4 +1,4 @@
-# Install script for directory: D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/graphProcessFuncs
+# Install script for directory: D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/parallelRWFile
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,29 +39,29 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/lib/libGraphProcessFuncs.a")
+   "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/lib/libParallelRWFile.a")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/lib" TYPE STATIC_LIBRARY FILES "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/src/graphProcessFuncs/libGraphProcessFuncs.a")
+  file(INSTALL DESTINATION "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/lib" TYPE STATIC_LIBRARY FILES "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/src/parallelRWFile/libParallelRWFile.a")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/install-cxx-module-bmi-Debug.cmake" OPTIONAL)
+  include("D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/src/parallelRWFile/CMakeFiles/ParallelRWFile.dir/install-cxx-module-bmi-Debug.cmake" OPTIONAL)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/include/graphProcessFuncs.h")
+   "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/include/parallelRWFile.h")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/include" TYPE FILE FILES "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/include/graphProcessFuncs.h")
+  file(INSTALL DESTINATION "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/include" TYPE FILE FILES "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/include/parallelRWFile.h")
 endif()
 

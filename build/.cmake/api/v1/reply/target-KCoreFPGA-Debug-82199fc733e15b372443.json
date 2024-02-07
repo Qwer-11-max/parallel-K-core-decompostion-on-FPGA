@@ -22,7 +22,7 @@
 		[
 			"CMakeLists.txt",
 			"src/graph/CMakeLists.txt",
-			"src/fileOperations/CMakeLists.txt"
+			"src/parallelRWFile/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -120,7 +120,7 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "FileOperations::@e161aabff11ece94d0c5"
+			"id" : "ParallelRWFile::@a177e332ffadc394b6bf"
 		}
 	],
 	"id" : "KCoreFPGA::@6890427a1f51a3e7e1df",
@@ -148,7 +148,7 @@
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "src\\fileOperations\\libFileOperations.a",
+				"fragment" : "src\\parallelRWFile\\libParallelRWFile.a",
 				"role" : "libraries"
 			},
 			{

@@ -7,9 +7,6 @@
 #include <iostream>
 #include <vector>
 
-#include "configure.h" //一些用得到的宏
-#include "fileOperations.h"
-
 /*NVE文件：后缀为nve，格式如下：
  *#vertex number
  *src dst   //其中每个顶点的的边是聚集在一起的

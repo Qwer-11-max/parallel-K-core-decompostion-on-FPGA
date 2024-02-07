@@ -1,0 +1,6 @@
+D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/lib/libGraphProcessFuncs.a
+D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/include/graphProcessFuncs.h
+D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/lib/libGraph.a
+D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/include/graph.h
+D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/lib/libParallelRWFile.a
+D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/include/parallelRWFile.h

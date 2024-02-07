@@ -38,6 +38,30 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/src/graph/libGraph.a")
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/lib/libGraph.a")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  file(INSTALL DESTINATION "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/lib" TYPE STATIC_LIBRARY FILES "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/src/graph/libGraph.a")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  include("D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/src/graph/CMakeFiles/Graph.dir/install-cxx-module-bmi-Debug.cmake" OPTIONAL)
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/include/graph.h")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  file(INSTALL DESTINATION "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/include" TYPE FILE FILES "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/include/graph.h")
 endif()
 

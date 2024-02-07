@@ -6,7 +6,6 @@
 #include <vector>
 #include <pthread.h>
 
-#include "configure.h"
 
 using namespace std;
 

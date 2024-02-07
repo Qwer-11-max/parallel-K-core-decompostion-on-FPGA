@@ -49,7 +49,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/src/fileOperations/cmake_install.cmake")
+  include("D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build/src/parallelRWFile/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

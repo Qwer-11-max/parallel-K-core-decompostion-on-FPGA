@@ -20,7 +20,6 @@
 		"files" : 
 		[
 			"src/graph/CMakeLists.txt",
-			"src/fileOperations/CMakeLists.txt",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -41,28 +40,19 @@
 				"parent" : 0
 			},
 			{
-				"file" : 1
-			},
-			{
-				"command" : 1,
-				"file" : 1,
-				"line" : 14,
-				"parent" : 3
-			},
-			{
 				"command" : 2,
 				"file" : 0,
 				"line" : 3,
 				"parent" : 0
 			},
 			{
-				"file" : 2
+				"file" : 1
 			},
 			{
 				"command" : 3,
-				"file" : 2,
+				"file" : 1,
 				"line" : 10,
-				"parent" : 6
+				"parent" : 4
 			},
 			{
 				"command" : 4,
@@ -84,11 +74,11 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 7,
+					"backtrace" : 5,
 					"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/include"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 6,
 					"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build"
 				}
 			],
@@ -102,12 +92,12 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 5,
+			"backtrace" : 3,
 			"id" : "GraphProcessFuncs::@4e60520b84a24d4adf41"
 		},
 		{
-			"backtrace" : 5,
-			"id" : "FileOperations::@e161aabff11ece94d0c5"
+			"backtrace" : 3,
+			"id" : "ParallelRWFile::@a177e332ffadc394b6bf"
 		}
 	],
 	"id" : "Graph::@ac88e395dda6631a5a41",
@@ -117,11 +107,7 @@
 		[
 			{
 				"backtrace" : 2,
-				"path" : "lib"
-			},
-			{
-				"backtrace" : 4,
-				"path" : "lib"
+				"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/lib"
 			}
 		],
 		"prefix" : 

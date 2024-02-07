@@ -198,7 +198,7 @@
 			"path" : "src/graph/CMakeLists.txt"
 		},
 		{
-			"path" : "src/fileOperations/CmakeLists.txt"
+			"path" : "src/parallelRWFile/CmakeLists.txt"
 		},
 		{
 			"isCMake" : true,

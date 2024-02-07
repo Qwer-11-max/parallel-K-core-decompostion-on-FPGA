@@ -13,9 +13,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.28.1/CMakeRCCompiler.cmake"
   "CMakeFiles/3.28.1/CMakeSystem.cmake"
   "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/configure.h.in"
-  "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/fileOperations/CMakeLists.txt"
   "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/graph/CMakeLists.txt"
   "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/graphProcessFuncs/CMakeLists.txt"
+  "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/parallelRWFile/CMakeLists.txt"
   "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/CMakeCInformation.cmake"
   "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/CMakeCXXInformation.cmake"
   "D:/env/Cmake2.28.1/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake"
@@ -69,7 +69,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/graphProcessFuncs/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/graph/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/fileOperations/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/parallelRWFile/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -105,5 +105,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/KCoreFPGA.dir/DependInfo.cmake"
   "src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/DependInfo.cmake"
   "src/graph/CMakeFiles/Graph.dir/DependInfo.cmake"
-  "src/fileOperations/CMakeFiles/FileOperations.dir/DependInfo.cmake"
+  "src/parallelRWFile/CMakeFiles/ParallelRWFile.dir/DependInfo.cmake"
   )

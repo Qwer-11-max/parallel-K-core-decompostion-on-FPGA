@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "src/fileOperations/libFileOperations.a"
+			"path" : "src/parallelRWFile/libParallelRWFile.a"
 		}
 	],
 	"backtrace" : 1,
@@ -12,12 +12,13 @@
 		"commands" : 
 		[
 			"add_library",
+			"install",
 			"include_directories",
 			"target_include_directories"
 		],
 		"files" : 
 		[
-			"src/fileOperations/CMakeLists.txt",
+			"src/parallelRWFile/CMakeLists.txt",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -32,16 +33,22 @@
 				"parent" : 0
 			},
 			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 14,
+				"parent" : 0
+			},
+			{
 				"file" : 1
 			},
 			{
-				"command" : 1,
+				"command" : 2,
 				"file" : 1,
 				"line" : 10,
-				"parent" : 2
+				"parent" : 3
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 5,
 				"parent" : 0
@@ -60,11 +67,11 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/include"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build"
 				}
 			],
@@ -75,13 +82,27 @@
 			]
 		}
 	],
-	"id" : "FileOperations::@e161aabff11ece94d0c5",
-	"name" : "FileOperations",
-	"nameOnDisk" : "libFileOperations.a",
+	"id" : "ParallelRWFile::@a177e332ffadc394b6bf",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "C:/Program Files (x86)/KCoreFPGA"
+		}
+	},
+	"name" : "ParallelRWFile",
+	"nameOnDisk" : "libParallelRWFile.a",
 	"paths" : 
 	{
-		"build" : "src/fileOperations",
-		"source" : "src/fileOperations"
+		"build" : "src/parallelRWFile",
+		"source" : "src/parallelRWFile"
 	},
 	"sourceGroups" : 
 	[
@@ -98,7 +119,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/fileOperations/fileOperations.cpp",
+			"path" : "src/parallelRWFile/parallelRWFile.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

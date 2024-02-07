@@ -1,5 +1,6 @@
 #include "graph.h"
-#include "fileOperations.h"
+#include "graphProcessFuncs.h"
+#include "parallelRWFile.h"
 
 bool Graph::listInited = false;
 Graph::p_GraphProcessFunc Graph::p_graphProcessFuncList[PROCESS_GRAPH_FUNC_ARRAY_SIZE] = {nullptr};
@@ -31,41 +32,6 @@ Graph::~Graph()
 {
     delete[] p_degrees;
     delete[] p_offset;
-}
-
-bool Graph::ReadProcessedGraph(std::string fileDir)
-{
-    //======打开要读取的文件======
-    std::string fileName = fileDir.substr(fileDir.find_last_of('/'), fileDir.find_last_of('.') - fileDir.find_last_of('/'));
-    std::ifstream fileDegrees, fileOffset, fileEdge;
-    fileDegrees.open(DEGREES_FILE(fileName));
-    fileOffset.open(OFFSET_FILE(fileName));
-    fileEdge.open(EDGES_FILE(fileName));
-    // 错误处理
-    if (!fileDegrees && !fileOffset && !fileEdge)
-    {
-        std::cout << fileName << "未被处理过" << std::endl;
-        return false;
-    }
-
-    //========读取文件======
-    std::cout << fileName + "已被处理过，开始读取" << std::endl;
-    fileDegrees >> vertex;
-    fileEdge >> edge;
-    p_degrees = new unsigned int[vertex];
-    p_offset = new unsigned int[vertex];
-    edges.resize(edge);
-
-    for (int i = 0; fileDegrees; i++)
-    {
-        fileDegrees >> p_degrees[i];
-        fileOffset >> p_offset[i];
-    }
-    for (int i = 0; fileEdge; i++)
-    {
-        fileEdge >> edges[i];
-    }
-    return true;
 }
 
 bool Graph::InitGraphProcessList()

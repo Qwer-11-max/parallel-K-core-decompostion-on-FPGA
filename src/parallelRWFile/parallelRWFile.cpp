@@ -1,4 +1,5 @@
-#include "fileOperations.h"
+#include "parallelRWFile.h"
+#include "configure.h"
 
 #define THREAD_SIZE 3
 namespace threadFuncArgs

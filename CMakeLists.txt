@@ -11,7 +11,7 @@ include_directories(${PROJECT_SOURCE_DIR}/src/include)
 configure_file(configure.h.in configure.h)
 add_subdirectory(src/graphProcessFuncs)
 add_subdirectory(src/graph)
-add_subdirectory(src/fileOperations)
+add_subdirectory(src/parallelRWFile)
 
 # 设置编译flags
 set(CMAKE_CXX_STANDARD 11)

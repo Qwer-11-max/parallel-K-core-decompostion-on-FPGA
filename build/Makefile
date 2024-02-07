@@ -594,17 +594,17 @@ Graph/fast:
 .PHONY : Graph/fast
 
 #=============================================================================
-# Target rules for targets named FileOperations
+# Target rules for targets named ParallelRWFile
 
 # Build rule for target.
-FileOperations: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 FileOperations
-.PHONY : FileOperations
+ParallelRWFile: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ParallelRWFile
+.PHONY : ParallelRWFile
 
 # fast build rule for target.
-FileOperations/fast:
-	$(MAKE) $(MAKESILENT) -f src\fileOperations\CMakeFiles\FileOperations.dir\build.make src/fileOperations/CMakeFiles/FileOperations.dir/build
-.PHONY : FileOperations/fast
+ParallelRWFile/fast:
+	$(MAKE) $(MAKESILENT) -f src\parallelRWFile\CMakeFiles\ParallelRWFile.dir\build.make src/parallelRWFile/CMakeFiles/ParallelRWFile.dir/build
+.PHONY : ParallelRWFile/fast
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -673,10 +673,10 @@ help:
 	@echo ... NightlySubmit
 	@echo ... NightlyTest
 	@echo ... NightlyUpdate
-	@echo ... FileOperations
 	@echo ... Graph
 	@echo ... GraphProcessFuncs
 	@echo ... KCoreFPGA
+	@echo ... ParallelRWFile
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
