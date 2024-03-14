@@ -15,7 +15,6 @@
 		[
 			"add_executable",
 			"target_link_libraries",
-			"include_directories",
 			"target_include_directories"
 		],
 		"files" : 
@@ -32,7 +31,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 21,
+				"line" : 20,
 				"parent" : 0
 			},
 			{
@@ -56,19 +55,13 @@
 			{
 				"command" : 1,
 				"file" : 2,
-				"line" : 10,
+				"line" : 11,
 				"parent" : 5
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 10,
-				"parent" : 0
-			},
-			{
-				"command" : 3,
-				"file" : 0,
-				"line" : 22,
+				"line" : 21,
 				"parent" : 0
 			}
 		]
@@ -86,11 +79,19 @@
 			[
 				{
 					"backtrace" : 7,
-					"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/include"
+					"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build"
 				},
 				{
-					"backtrace" : 8,
-					"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build"
+					"backtrace" : 7,
+					"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/graph"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/graphProcessFuncs"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/parallelRWFile"
 				}
 			],
 			"language" : "CXX",

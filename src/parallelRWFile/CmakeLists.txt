@@ -1,15 +1,17 @@
+# 寻求pthread支持
 find_package(Threads)
 
+# 创建parallelRWFile库
 add_library(ParallelRWFile STATIC parallelRWFile.cpp)
 
 target_include_directories(ParallelRWFile PUBLIC
     "${PROJECT_BINARY_DIR}"
-    "${PROJECT_SOURCE_DIR}/src/include"
 )
 
 target_link_libraries(ParallelRWFile
     "${CMAKE_THREAD_LIBS_INIT}"
 )
 
+# 安装并行读取库
 install(TARGETS ParallelRWFile DESTINATION ${PROJECT_SOURCE_DIR}/lib)
-install(FILES ${PROJECT_SOURCE_DIR}/src/include/parallelRWFile.h DESTINATION ${PROJECT_SOURCE_DIR}/include)
+install(FILES parallelRWFile.h DESTINATION ${PROJECT_SOURCE_DIR}/include)

@@ -17,13 +17,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 14,
+				"line" : 16,
 				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 15,
+				"line" : 17,
 				"parent" : 0
 			}
 		]
@@ -59,7 +59,7 @@
 			"destination" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/include",
 			"paths" : 
 			[
-				"src/include/parallelRWFile.h"
+				"src/parallelRWFile/parallelRWFile.h"
 			],
 			"type" : "file"
 		}

@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "src/parallelRWFile/libParallelRWFile.a"
+			"path" : "src/graphProcessFuncs/libGraphProcessFuncs.a"
 		}
 	],
 	"backtrace" : 1,
@@ -13,13 +13,11 @@
 		[
 			"add_library",
 			"install",
-			"include_directories",
 			"target_include_directories"
 		],
 		"files" : 
 		[
-			"src/parallelRWFile/CMakeLists.txt",
-			"CMakeLists.txt"
+			"src/graphProcessFuncs/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -29,26 +27,17 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 3,
+				"line" : 4,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 14,
+				"line" : 11,
 				"parent" : 0
 			},
 			{
-				"file" : 1
-			},
-			{
 				"command" : 2,
-				"file" : 1,
-				"line" : 10,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
 				"file" : 0,
 				"line" : 5,
 				"parent" : 0
@@ -67,12 +56,12 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 4,
-					"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/include"
+					"backtrace" : 3,
+					"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build"
 				},
 				{
-					"backtrace" : 5,
-					"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build"
+					"backtrace" : 3,
+					"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/parallelRWFile"
 				}
 			],
 			"language" : "CXX",
@@ -82,7 +71,7 @@
 			]
 		}
 	],
-	"id" : "ParallelRWFile::@a177e332ffadc394b6bf",
+	"id" : "GraphProcessFuncs::@4e60520b84a24d4adf41",
 	"install" : 
 	{
 		"destinations" : 
@@ -97,12 +86,12 @@
 			"path" : "C:/Program Files (x86)/KCoreFPGA"
 		}
 	},
-	"name" : "ParallelRWFile",
-	"nameOnDisk" : "libParallelRWFile.a",
+	"name" : "GraphProcessFuncs",
+	"nameOnDisk" : "libGraphProcessFuncs.a",
 	"paths" : 
 	{
-		"build" : "src/parallelRWFile",
-		"source" : "src/parallelRWFile"
+		"build" : "src/graphProcessFuncs",
+		"source" : "src/graphProcessFuncs"
 	},
 	"sourceGroups" : 
 	[
@@ -112,6 +101,13 @@
 			[
 				0
 			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				1
+			]
 		}
 	],
 	"sources" : 
@@ -119,8 +115,13 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/parallelRWFile/parallelRWFile.cpp",
+			"path" : "src/graphProcessFuncs/graphProcessFunc_NVE.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/graphProcessFuncs/graphProcessFuncs.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "STATIC_LIBRARY"

@@ -204,6 +204,30 @@ Graph/fast:
 	cd /d D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build && $(MAKE) $(MAKESILENT) -f src\graph\CMakeFiles\Graph.dir\build.make src/graph/CMakeFiles/Graph.dir/build
 .PHONY : Graph/fast
 
+PKC.obj: PKC.cpp.obj
+.PHONY : PKC.obj
+
+# target to build an object file
+PKC.cpp.obj:
+	cd /d D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build && $(MAKE) $(MAKESILENT) -f src\graph\CMakeFiles\Graph.dir\build.make src/graph/CMakeFiles/Graph.dir/PKC.cpp.obj
+.PHONY : PKC.cpp.obj
+
+PKC.i: PKC.cpp.i
+.PHONY : PKC.i
+
+# target to preprocess a source file
+PKC.cpp.i:
+	cd /d D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build && $(MAKE) $(MAKESILENT) -f src\graph\CMakeFiles\Graph.dir\build.make src/graph/CMakeFiles/Graph.dir/PKC.cpp.i
+.PHONY : PKC.cpp.i
+
+PKC.s: PKC.cpp.s
+.PHONY : PKC.s
+
+# target to generate assembly for a file
+PKC.cpp.s:
+	cd /d D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build && $(MAKE) $(MAKESILENT) -f src\graph\CMakeFiles\Graph.dir\build.make src/graph/CMakeFiles/Graph.dir/PKC.cpp.s
+.PHONY : PKC.cpp.s
+
 graph.obj: graph.cpp.obj
 .PHONY : graph.obj
 
@@ -244,6 +268,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... test
 	@echo ... Graph
+	@echo ... PKC.obj
+	@echo ... PKC.i
+	@echo ... PKC.s
 	@echo ... graph.obj
 	@echo ... graph.i
 	@echo ... graph.s

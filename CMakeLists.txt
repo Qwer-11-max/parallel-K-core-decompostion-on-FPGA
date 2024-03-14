@@ -7,7 +7,6 @@ include(CTest)
 enable_testing()
 
 # 默认配置文件
-include_directories(${PROJECT_SOURCE_DIR}/src/include)
 configure_file(configure.h.in configure.h)
 add_subdirectory(src/graphProcessFuncs)
 add_subdirectory(src/graph)
@@ -21,6 +20,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(KCoreFPGA main.cpp)
 target_include_directories(KCoreFPGA PUBLIC
     "${PROJECT_BINARY_DIR}"
+    "${PROJECT_SOURCE_DIR}/src/graph"
 )
 target_link_libraries(KCoreFPGA PUBLIC
     Graph

@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/graph/PKC.cpp" "src/graph/CMakeFiles/Graph.dir/PKC.cpp.obj" "gcc" "src/graph/CMakeFiles/Graph.dir/PKC.cpp.obj.d"
   "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/graph/graph.cpp" "src/graph/CMakeFiles/Graph.dir/graph.cpp.obj" "gcc" "src/graph/CMakeFiles/Graph.dir/graph.cpp.obj.d"
   )
 

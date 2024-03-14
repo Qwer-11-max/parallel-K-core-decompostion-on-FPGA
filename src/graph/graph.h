@@ -7,7 +7,9 @@
 
 // 该类中要用到的一些宏
 #define PROCESS_GRAPH_FUNC_ARRAY_SIZE 128 // 图处理函数列表的容量
-// 用于存储图信息，包括顶点，边等信息
+
+
+// @brief  图处理类，其中包含了读取图，处理图等相关处理流程
 class Graph
 {
 private:
@@ -33,18 +35,27 @@ public:
     /*  @param fileDir:要读取的文件位置
         @param initGraph:是否强制处理图 */
     Graph(std::string fileDir, bool initGraph = false);
+
+    /*  @brief PKC算法，将处理后的核保存至coreInformation.txt文件中*/
+    bool PKC();
+
     /*  @return vertex:图的度数*/
     unsigned int GetVertex() const { return vertex; };
+
     /*  @return vertex:图的边数*/
     unsigned int GetEdge() const { return edge; };
+
     /*  @return vertex:图的平均度*/
     unsigned int GetAvgDeg() const { return avgDeg; };
-    /*  @return processFailed:图像处理是否失败*/
+
+    /*  @return processFailed:图处理是否失败*/
     bool GetProcessResult() const { return processFailed; };
+    
     ~Graph();
 
 private:
-    /*  @param  func:要插入的处理函数
+    /*  @brief  将处理函数插入到处理函数列表中，方便后续自动处理同类型图
+        @param  func:要插入的处理函数
         @param  typeName:函数处理的类型
         @param  loc:函数在列表中的位置
         @return true:成功插入
@@ -60,10 +71,14 @@ private:
         hash[typeName] = loc;
         return true;
     };
-    /*  @return true:初始化成功
+
+    /*  @brief  初始化图处理函数列表
+        @return true:初始化成功
         @return false:初始化失败*/
     bool InitGraphProcessList();
-    /*  @param  fileDir:要处理的图
+
+    /*  @brief  获取要处理的图类型，并返回相应的处理函数指针
+        @param  fileDir:要处理的图
         @return func:处理该文件所需要的图处理函数*/
     inline p_GraphProcessFunc GetGraphProcessFunc(std::string fileDir)
     {

@@ -1,5 +1,4 @@
 #include "graphProcessFuncs.h"
-#include "parallelRWFile.h"
 
 bool GraphProcessFunc_NVE(std::string fileDir, unsigned int &vertex, unsigned int &edge,
                           unsigned int **p_degrees, unsigned int **p_offset, std::vector<unsigned int> &edges)

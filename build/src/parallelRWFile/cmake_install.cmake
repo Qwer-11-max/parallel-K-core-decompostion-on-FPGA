@@ -62,6 +62,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/include" TYPE FILE FILES "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/include/parallelRWFile.h")
+  file(INSTALL DESTINATION "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/include" TYPE FILE FILES "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/parallelRWFile/parallelRWFile.h")
 endif()
 

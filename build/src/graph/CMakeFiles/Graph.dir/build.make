@@ -83,17 +83,34 @@ src/graph/CMakeFiles/Graph.dir/graph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Graph.dir/graph.cpp.s"
 	cd /d D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\src\graph && D:\env\MinGW64_win32\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\src\graph\graph.cpp -o CMakeFiles\Graph.dir\graph.cpp.s
 
+src/graph/CMakeFiles/Graph.dir/PKC.cpp.obj: src/graph/CMakeFiles/Graph.dir/flags.make
+src/graph/CMakeFiles/Graph.dir/PKC.cpp.obj: src/graph/CMakeFiles/Graph.dir/includes_CXX.rsp
+src/graph/CMakeFiles/Graph.dir/PKC.cpp.obj: D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/graph/PKC.cpp
+src/graph/CMakeFiles/Graph.dir/PKC.cpp.obj: src/graph/CMakeFiles/Graph.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/graph/CMakeFiles/Graph.dir/PKC.cpp.obj"
+	cd /d D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\src\graph && D:\env\MinGW64_win32\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/graph/CMakeFiles/Graph.dir/PKC.cpp.obj -MF CMakeFiles\Graph.dir\PKC.cpp.obj.d -o CMakeFiles\Graph.dir\PKC.cpp.obj -c D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\src\graph\PKC.cpp
+
+src/graph/CMakeFiles/Graph.dir/PKC.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Graph.dir/PKC.cpp.i"
+	cd /d D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\src\graph && D:\env\MinGW64_win32\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\src\graph\PKC.cpp > CMakeFiles\Graph.dir\PKC.cpp.i
+
+src/graph/CMakeFiles/Graph.dir/PKC.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Graph.dir/PKC.cpp.s"
+	cd /d D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\src\graph && D:\env\MinGW64_win32\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\src\graph\PKC.cpp -o CMakeFiles\Graph.dir\PKC.cpp.s
+
 # Object files for target Graph
 Graph_OBJECTS = \
-"CMakeFiles/Graph.dir/graph.cpp.obj"
+"CMakeFiles/Graph.dir/graph.cpp.obj" \
+"CMakeFiles/Graph.dir/PKC.cpp.obj"
 
 # External object files for target Graph
 Graph_EXTERNAL_OBJECTS =
 
 src/graph/libGraph.a: src/graph/CMakeFiles/Graph.dir/graph.cpp.obj
+src/graph/libGraph.a: src/graph/CMakeFiles/Graph.dir/PKC.cpp.obj
 src/graph/libGraph.a: src/graph/CMakeFiles/Graph.dir/build.make
 src/graph/libGraph.a: src/graph/CMakeFiles/Graph.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libGraph.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libGraph.a"
 	cd /d D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\src\graph && $(CMAKE_COMMAND) -P CMakeFiles\Graph.dir\cmake_clean_target.cmake
 	cd /d D:\CodeRepository\parallel-K-core-decompostion-on-FPGA\build\src\graph && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Graph.dir\link.txt --verbose=$(VERBOSE)
 

@@ -1,2 +1,2 @@
-D:\env\MinGW64_win32\mingw64\bin\ar.exe qc libGraph.a CMakeFiles/Graph.dir/graph.cpp.obj
+D:\env\MinGW64_win32\mingw64\bin\ar.exe qc libGraph.a CMakeFiles/Graph.dir/graph.cpp.obj CMakeFiles/Graph.dir/PKC.cpp.obj
 D:\env\MinGW64_win32\mingw64\bin\ranlib.exe libGraph.a

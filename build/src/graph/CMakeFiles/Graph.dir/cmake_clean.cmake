@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Graph.dir/PKC.cpp.obj"
+  "CMakeFiles/Graph.dir/PKC.cpp.obj.d"
   "CMakeFiles/Graph.dir/graph.cpp.obj"
   "CMakeFiles/Graph.dir/graph.cpp.obj.d"
   "libGraph.a"
