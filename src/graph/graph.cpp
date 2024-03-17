@@ -12,14 +12,14 @@ Graph::Graph(std::string fileDir, bool initGraph) : processFailed(false)
     if (!listInited)
         InitGraphProcessList();
     // 判断该图是否已被处理，如果已被处理就直接读取并返回
-    if (!initGraph && ParallelReadStdGraph(fileDir, vertex, edge, &p_degrees, &p_offset, edges))
+    if (!initGraph && ParallelReadStdGraph(fileDir, vertex, edge, degrees, offsets, adjs))
         return;
     // 获取图的处理函数
     p_GraphProcessFunc func = GetGraphProcessFunc(fileDir);
     if (!func)
         return;
     // 调用图处理函数来处理图
-    if (!func(fileDir, vertex, edge, &p_degrees, &p_offset, edges))
+    if (!func(fileDir, vertex, edge, degrees, offsets, adjs))
     {
         std::cout << "图处理失败" << std::endl;
         processFailed = true;
@@ -30,8 +30,6 @@ Graph::Graph(std::string fileDir, bool initGraph) : processFailed(false)
 
 Graph::~Graph()
 {
-    delete[] p_degrees;
-    delete[] p_offset;
 }
 
 bool Graph::InitGraphProcessList()

@@ -1,0 +1,130 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "src/parallelRWFile/libParallelRWFile.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"install",
+			"target_link_libraries",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"src/parallelRWFile/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 18,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 12,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 7,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/build"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/src/threadPool"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "ThreadPool::@37a79dee02ddfdc9ed6b"
+		}
+	],
+	"id" : "ParallelRWFile::@a177e332ffadc394b6bf",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "C:/Program Files (x86)/KCoreFPGA"
+		}
+	},
+	"name" : "ParallelRWFile",
+	"nameOnDisk" : "libParallelRWFile.a",
+	"paths" : 
+	{
+		"build" : "src/parallelRWFile",
+		"source" : "src/parallelRWFile"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/parallelRWFile/parallelRWFile.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

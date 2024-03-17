@@ -1,0 +1,72 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"src/threadPool/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 9,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 10,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/include",
+			"paths" : 
+			[
+				"src/threadPool/threadPool.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/lib",
+			"paths" : 
+			[
+				"src/threadPool/libThreadPool.a"
+			],
+			"targetId" : "ThreadPool::@37a79dee02ddfdc9ed6b",
+			"targetIndex" : 32,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "ThreadPool::@37a79dee02ddfdc9ed6b",
+				"index" : 32
+			},
+			"destination" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/lib",
+			"type" : "cxxModuleBmi"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/threadPool",
+		"source" : "src/threadPool"
+	}
+}

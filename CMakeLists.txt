@@ -11,6 +11,7 @@ configure_file(configure.h.in configure.h)
 add_subdirectory(src/graphProcessFuncs)
 add_subdirectory(src/graph)
 add_subdirectory(src/parallelRWFile)
+add_subdirectory(src/threadPool)
 
 # 设置编译flags
 set(CMAKE_CXX_STANDARD 11)

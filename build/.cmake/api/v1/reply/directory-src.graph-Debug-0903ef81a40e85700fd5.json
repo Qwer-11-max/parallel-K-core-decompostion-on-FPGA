@@ -1,0 +1,72 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"src/graph/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 15,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 16,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/lib",
+			"paths" : 
+			[
+				"src/graph/libGraph.a"
+			],
+			"targetId" : "Graph::@ac88e395dda6631a5a41",
+			"targetIndex" : 18,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "Graph::@ac88e395dda6631a5a41",
+				"index" : 18
+			},
+			"destination" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/lib",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/include",
+			"paths" : 
+			[
+				"src/graph/graph.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/graph",
+		"source" : "src/graph"
+	}
+}

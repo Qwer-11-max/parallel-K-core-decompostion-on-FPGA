@@ -11,6 +11,6 @@
 #define PROCESSED_GRAPH_DIR "D:/CodeRepository/parallel-K-core-decompostion-on-FPGA/processedGraph/" //处理过的图存储位置
 
 /*=====存储标准图的文件格式=====*/
-#define DEGREES_FILE(filename) PROCESSED_GRAPH_DIR + filename + "_Degrees.txt"
-#define OFFSET_FILE(filename) PROCESSED_GRAPH_DIR + filename + "_Offset.txt"
-#define EDGES_FILE(filename) PROCESSED_GRAPH_DIR + filename + "_Edges.txt"
+#define DEGREES_FILE(filename) PROCESSED_GRAPH_DIR + filename + "_Degrees"
+#define OFFSET_FILE(filename) PROCESSED_GRAPH_DIR + filename + "_Offset"
+#define ADJS_FILE(filename) PROCESSED_GRAPH_DIR + filename + "_Adjs"

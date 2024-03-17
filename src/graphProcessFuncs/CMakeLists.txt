@@ -2,6 +2,10 @@
 file(GLOB GRAPH_PROCESS_FUNC_SRC ${CMAKE_CURRENT_SOURCE_DIR}/graphProcessFunc_*.cpp;graphProcessFuncs.h)
 # 创建图处理函数库
 add_library(GraphProcessFuncs STATIC ${GRAPH_PROCESS_FUNC_SRC})
+
+target_link_libraries(GraphProcessFuncs 
+    PUBLIC ParallelRWFile
+)
 target_include_directories(GraphProcessFuncs PUBLIC
     "${PROJECT_BINARY_DIR}"
     "${PROJECT_SOURCE_DIR}/src/parallelRWFile"

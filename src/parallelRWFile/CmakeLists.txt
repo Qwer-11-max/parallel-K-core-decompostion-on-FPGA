@@ -6,10 +6,12 @@ add_library(ParallelRWFile STATIC parallelRWFile.cpp)
 
 target_include_directories(ParallelRWFile PUBLIC
     "${PROJECT_BINARY_DIR}"
+    "${PROJECT_SOURCE_DIR}/src/threadPool"
 )
 
 target_link_libraries(ParallelRWFile
-    "${CMAKE_THREAD_LIBS_INIT}"
+    PUBLIC "${CMAKE_THREAD_LIBS_INIT}"
+    PUBLIC ThreadPool
 )
 
 # 安装并行读取库

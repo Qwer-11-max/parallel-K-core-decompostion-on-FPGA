@@ -7,17 +7,25 @@
 #include <iostream>
 #include <vector>
 
-/*NVE文件：后缀为nve，格式如下：
- *#vertex number
- *src dst   //其中每个顶点的的边是聚集在一起的
- *src dst
- *.....
- */
+#include "parallelRWFile.h"
+
 /*  @param fileDir:要读取的文件路径
     @param vertex:顶点数
     @param edge:边数
-    @param p_degree:存储边的数组
-    @param p_offset:存储偏移值的数组
-    @param edges:存储边的数组*/
+    @param degrees:存储边的数组
+    @param offsets:存储偏移值的数组
+    @param adjs:存储边的数组*/
+
+/// @brief 处理NVE文件，该文件格式如下
+/// # 顶点数量
+/// src dst
+/// src dst
+/// @param fileDir 文件的绝对路径，用于打开文件
+/// @param vertex 顶点数
+/// @param edge 边数
+/// @param degrees 存储顶点的数组
+/// @param offsets 存储偏移值的数组
+/// @param adjs 存储邻接点
+/// @return 成功处理返回true，否则返回false
 bool GraphProcessFunc_NVE(std::string fileDir, unsigned int &vertex, unsigned int &edge,
-                          unsigned int **p_degrees, unsigned int **p_offset, std::vector<unsigned int> &edges);
+                          std::vector<unsigned int> &degrees, std::vector<unsigned int> &offset, std::vector<unsigned int> &adjs);

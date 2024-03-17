@@ -95,6 +95,7 @@ KCoreFPGA.exe: CMakeFiles/KCoreFPGA.dir/build.make
 KCoreFPGA.exe: src/graph/libGraph.a
 KCoreFPGA.exe: src/graphProcessFuncs/libGraphProcessFuncs.a
 KCoreFPGA.exe: src/parallelRWFile/libParallelRWFile.a
+KCoreFPGA.exe: src/threadPool/libThreadPool.a
 KCoreFPGA.exe: CMakeFiles/KCoreFPGA.dir/linkLibs.rsp
 KCoreFPGA.exe: CMakeFiles/KCoreFPGA.dir/objects1.rsp
 KCoreFPGA.exe: CMakeFiles/KCoreFPGA.dir/link.txt

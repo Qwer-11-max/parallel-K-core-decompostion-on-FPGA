@@ -8,23 +8,22 @@
 // 该类中要用到的一些宏
 #define PROCESS_GRAPH_FUNC_ARRAY_SIZE 128 // 图处理函数列表的容量
 
-
 // @brief  图处理类，其中包含了读取图，处理图等相关处理流程
 class Graph
 {
 private:
     /* 基础变量 */
-    unsigned int vertex;             // 顶点数量
-    unsigned int edge;               // 边数
-    unsigned int *p_degrees;         // 存储顶点度数
-    unsigned int *p_offset;          // 存储顶点在p_edges当中的起始位置
-    std::vector<unsigned int> edges; // 存储边
+    unsigned int vertex;               // 顶点数量
+    unsigned int edge;                 // 边数
+    std::vector<unsigned int> degrees; // 存储顶点度数
+    std::vector<unsigned int> offsets;  // 存储顶点在p_edges当中的起始位置
+    std::vector<unsigned int> adjs;   // 存储邻接点
 
     /*图的一些属性*/
     double avgDeg; // 平均度
 
     typedef bool (*p_GraphProcessFunc)(std::string fileDir, unsigned int &vertex, unsigned int &edge,
-                                       unsigned int **p_degrees, unsigned int **p_offset, std::vector<unsigned int> &edges); // 一个处理图的函数指针类型
+                                       std::vector<unsigned int> &degrees, std::vector<unsigned int> &offset, std::vector<unsigned int> &adjs); // 一个处理图的函数指针类型
     /* 处理图可能要用到的变量 */
     static p_GraphProcessFunc p_graphProcessFuncList[PROCESS_GRAPH_FUNC_ARRAY_SIZE]; // 图处理函数列表
     static std::map<std::string, int> hash;                                          // 类型和在图处理函数中位置的映射表
@@ -50,7 +49,7 @@ public:
 
     /*  @return processFailed:图处理是否失败*/
     bool GetProcessResult() const { return processFailed; };
-    
+
     ~Graph();
 
 private:

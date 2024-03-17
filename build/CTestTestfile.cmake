@@ -7,3 +7,4 @@
 subdirs("src/graphProcessFuncs")
 subdirs("src/graph")
 subdirs("src/parallelRWFile")
+subdirs("src/threadPool")

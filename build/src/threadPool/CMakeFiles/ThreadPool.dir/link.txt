@@ -1,0 +1,2 @@
+D:\env\MinGW64_win32\mingw64\bin\ar.exe qc libThreadPool.a CMakeFiles/ThreadPool.dir/threadPool.cpp.obj
+D:\env\MinGW64_win32\mingw64\bin\ranlib.exe libThreadPool.a

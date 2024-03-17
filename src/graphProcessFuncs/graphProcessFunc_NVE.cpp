@@ -1,7 +1,7 @@
 #include "graphProcessFuncs.h"
 
 bool GraphProcessFunc_NVE(std::string fileDir, unsigned int &vertex, unsigned int &edge,
-                          unsigned int **p_degrees, unsigned int **p_offset, std::vector<unsigned int> &edges)
+                          std::vector<unsigned int> &degrees, std::vector<unsigned int> &offsets, std::vector<unsigned int> &adjs)
 {
     std::ifstream fileIn;
     fileIn.open(fileDir); // 打开要处理的数据集
@@ -20,37 +20,39 @@ bool GraphProcessFunc_NVE(std::string fileDir, unsigned int &vertex, unsigned in
     // 读取顶点数量
     fileIn >> temp >> vertex;
     // 设置度数和偏移数组
-    *p_degrees = new unsigned int[vertex];
-    *p_offset = new unsigned int[vertex];
+    degrees.resize(vertex);
+    offsets.resize(vertex);
 
     // 读取度，偏移和边的信息
     unsigned int offset = 0, degree = 0;
     unsigned int src = 0, dst = 0, preSrc = -1;
     bool isFirst = true;
+
     while (fileIn)
     {
         fileIn >> src >> dst;
 
         if (src != preSrc)
         {
-            (*p_offset)[src] = offset;
+            offsets[src] = offset;
             if (!isFirst)
             {
-                (*p_degrees)[preSrc] = degree;
+                degrees[preSrc] = degree;
                 degree = 0;
             }
             isFirst = false;
             preSrc = src;
         }
-        edges.push_back(dst);
+        adjs.push_back(dst);
         offset++;
         degree++;
     }
-    (*p_degrees)[src] = degree;
-    edge = edges.size();
+    degrees[src] = degree;
+    edge = adjs.size();
     fileIn.close();
 
+    //开始写入文件
     std::cout << "读取完毕，开始写入文件" << std::endl;
-    ParallelWriteStdGraph(fileDir,vertex,edge,*p_degrees,*p_offset,edges);
+    ParallelWriteStdGraph(fileDir,vertex,edge,degrees,offsets,adjs);
     return true;
 }

@@ -606,6 +606,19 @@ ParallelRWFile/fast:
 	$(MAKE) $(MAKESILENT) -f src\parallelRWFile\CMakeFiles\ParallelRWFile.dir\build.make src/parallelRWFile/CMakeFiles/ParallelRWFile.dir/build
 .PHONY : ParallelRWFile/fast
 
+#=============================================================================
+# Target rules for targets named ThreadPool
+
+# Build rule for target.
+ThreadPool: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ThreadPool
+.PHONY : ThreadPool
+
+# fast build rule for target.
+ThreadPool/fast:
+	$(MAKE) $(MAKESILENT) -f src\threadPool\CMakeFiles\ThreadPool.dir\build.make src/threadPool/CMakeFiles/ThreadPool.dir/build
+.PHONY : ThreadPool/fast
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -677,6 +690,7 @@ help:
 	@echo ... GraphProcessFuncs
 	@echo ... KCoreFPGA
 	@echo ... ParallelRWFile
+	@echo ... ThreadPool
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
