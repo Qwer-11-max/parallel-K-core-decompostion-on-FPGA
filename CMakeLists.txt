@@ -14,7 +14,7 @@ add_subdirectory(src/parallelRWFile)
 add_subdirectory(src/threadPool)
 
 # 设置编译flags
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # KCoreFPGA项目配置

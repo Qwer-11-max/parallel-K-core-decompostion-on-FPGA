@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <thread>
+#include <atomic>
 
 // 该类中要用到的一些宏
 #define PROCESS_GRAPH_FUNC_ARRAY_SIZE 128 // 图处理函数列表的容量

@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
     }
     std::string fileDir(argv[1]);
     
-    Graph grh(fileDir,true);
+    Graph grh(fileDir,false);
+    grh.PKC();
     return 0;
 }
