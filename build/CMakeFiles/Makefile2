@@ -905,8 +905,8 @@ CMakeFiles/ContinuousSubmit.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/KCoreFPGA.dir/all: src/graphProcessFuncs/CMakeFiles/GraphProcessFuncs.dir/all
-CMakeFiles/KCoreFPGA.dir/all: src/parallelRWFile/CMakeFiles/ParallelRWFile.dir/all
 CMakeFiles/KCoreFPGA.dir/all: src/graph/CMakeFiles/Graph.dir/all
+CMakeFiles/KCoreFPGA.dir/all: src/parallelRWFile/CMakeFiles/ParallelRWFile.dir/all
 CMakeFiles/KCoreFPGA.dir/all: src/threadPool/CMakeFiles/ThreadPool.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\KCoreFPGA.dir\build.make CMakeFiles/KCoreFPGA.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\KCoreFPGA.dir\build.make CMakeFiles/KCoreFPGA.dir/build

@@ -20,17 +20,16 @@ bool GraphProcessFunc_NVE(std::string fileDir, unsigned int &vertex, unsigned in
     // 读取顶点数量
     fileIn >> temp >> vertex;
     // 设置度数和偏移数组
-    degrees.resize(vertex);
-    offsets.resize(vertex);
+    degrees.resize(vertex,0);
+    offsets.resize(vertex,0);
 
     // 读取度，偏移和边的信息
     unsigned int offset = 0, degree = 0;
     unsigned int src = 0, dst = 0, preSrc = -1;
     bool isFirst = true;
 
-    while (fileIn)
+    while (fileIn >> src >> dst)
     {
-        fileIn >> src >> dst;
 
         if (src != preSrc)
         {
