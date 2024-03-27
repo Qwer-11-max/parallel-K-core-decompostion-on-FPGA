@@ -1,10 +1,12 @@
 #include <queue>
 #include <mutex>
 #include <atomic>
+#include <fstream>
 #include <shared_mutex>
 
 #include "graph.h"
 #include "threadPool.h"
+#include "configure.h"
 
 /// @brief 互斥队列，可以原子化的操作队列
 /// @tparam T 队列的数据类型
@@ -73,21 +75,21 @@ public:
 /// @param id 进程id号
 /// @param hardwareCount 线程总数
 int ScanGraph(std::vector<MutexVector<unsigned int>> &waitQueue,
-              std::vector<std::atomic_uint> &degrees, std::vector<bool> &processed, int k, unsigned int id, int hardwareCount)
+              std::vector<std::atomic_uint> &degrees, std::vector<std::atomic_bool> &processed, int k, unsigned int id, int hardwareCount)
 {
     //======逐个扫描顶点的度数，将度<=k的顶点放入待处理队列=======
     unsigned int n = degrees.size();
     for (unsigned int i = 0; i < n; i += hardwareCount)
     {
         unsigned int loc = id + i;
-        if (loc < n && !processed[loc] && degrees[loc].load() <= k)
+        if (loc < n && !processed[loc].load() && degrees[loc].load() <= k)
             waitQueue[id].enQueue(loc);
     }
     return 1;
 }
 
 int loopGraph(MutexVector<unsigned int> &coreVertexs,
-              int k, int id, std::vector<MutexVector<unsigned int>> &waitVector, std::vector<bool> &processed,
+              int k, int id, std::vector<MutexVector<unsigned int>> &waitVector, std::vector<std::atomic_bool> &processed,
               std::vector<std::atomic_uint> &atomicDegrees, std::vector<unsigned int> &offsets, std::vector<unsigned int> &adjs,
               std::vector<unsigned int> &degrees)
 {
@@ -99,13 +101,13 @@ int loopGraph(MutexVector<unsigned int> &coreVertexs,
     {
         waitVector[id].deQueue(num);
         coreVertexs.enQueue(num);
-        processed[num] = true;
+        processed[num].store(true);
         unsigned int left = offsets[num];
         for (unsigned int j = 0; j < degrees[num]; j++)
         {
-            unsigned int loc = j + left; //邻接点在adjs中的位置
+            unsigned int loc = j + left; // 邻接点在adjs中的位置
             // 邻接点未被处理过，且度数大于k，则其度数减一
-            if (!processed[adjs[loc]] && atomicDegrees[adjs[loc]].load() > k)
+            if (!processed[adjs[loc]].load() &&atomicDegrees[adjs[loc]].load() > k)
             {
                 unsigned int deg_u = atomicDegrees[adjs[loc]].fetch_sub(1);
                 if (deg_u == k + 1)
@@ -121,8 +123,12 @@ int loopGraph(MutexVector<unsigned int> &coreVertexs,
 bool Graph::PKC()
 {
     //=========进行k核分解前的先期准备========
-    std::vector<bool> processed(vertex, false);                      // 标记顶点是否被处理过，如果被处理过则置为true，否则false
-    int hardwareCount = 16;                                          // std::thread::hardware_concurrency();         // 查询硬件支持的线程数量
+    std::vector<std::atomic_bool> processed(vertex); // 标记顶点是否被处理过，如果被处理过则置为true，否则false
+    for (auto &x : processed)
+    {
+        x.store(false);
+    }
+    int hardwareCount = std::thread::hardware_concurrency();         // 查询硬件支持的线程数量
     std::vector<MutexVector<unsigned int>> waitQueue(hardwareCount); // 等待处理的顶点队列，每个线程一个
     std::vector<std::atomic_uint> atomicDegrees(vertex);             // 将degrees数组转换为可以原子操作的数组，方便多线程操作
     // 初始化原子变量
@@ -169,5 +175,21 @@ bool Graph::PKC()
     pool.shutdown();
     //=========k核分解完成，进行其他操作=====
 
+    // 将结果写入文件
+    std::ofstream fileOffsets, fileVertex;
+
+    // 写入偏移
+    fileOffsets.open(OUTPUT_FILE(fileName + "_Offset"));
+    for (auto &i : coreOffsets)
+        fileOffsets << i << std::endl;
+    fileOffsets.close();
+
+    // 写入点
+    fileVertex.open(OUTPUT_FILE(fileName + "_Vertex"));
+    for (unsigned int i = 0, temp; i < vertex; i++)
+    {
+        coreVertex.deQueue(temp);
+        fileVertex << temp << std::endl;
+    }
     return false;
 }

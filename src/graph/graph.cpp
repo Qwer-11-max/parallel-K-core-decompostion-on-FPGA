@@ -8,6 +8,7 @@ std::map<std::string, int> Graph::hash;
 
 Graph::Graph(std::string fileDir, bool initGraph) : processFailed(false)
 {
+    fileName = fileDir.substr(fileDir.find_last_of('/'), fileDir.find_last_of('.') - fileDir.find_last_of('/'));
     // 加载图处理函数
     if (!listInited)
         InitGraphProcessList();

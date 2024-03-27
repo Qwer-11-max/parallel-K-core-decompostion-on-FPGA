@@ -14,3 +14,4 @@
 #define DEGREES_FILE(filename) PROCESSED_GRAPH_DIR + filename + "_Degrees"
 #define OFFSET_FILE(filename) PROCESSED_GRAPH_DIR + filename + "_Offset"
 #define ADJS_FILE(filename) PROCESSED_GRAPH_DIR + filename + "_Adjs"
+#define OUTPUT_FILE(filename) OUTPUT_DIR + filename + ".txt"

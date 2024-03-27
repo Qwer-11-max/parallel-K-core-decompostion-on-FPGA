@@ -15,43 +15,54 @@ bool GraphProcessFunc_NVE(std::string fileDir, unsigned int &vertex, unsigned in
 
     /*===处理图===*/
     std::cout << "开始处理nve文件" << std::endl;
-    std::string temp;
+    // 读取第一行并弃用
+    std::string firstLine;
+    getline(fileIn, firstLine);
 
-    // 读取顶点数量
-    fileIn >> temp >> vertex;
-    // 设置度数和偏移数组
-    degrees.resize(vertex,0);
-    offsets.resize(vertex,0);
+    unsigned int maxCount = 0;        // 图的最大顶点id + 1
+    unsigned int src, dst;            // 一条边
+    unsigned int degree = 0, cur = 0; // 记录度数,邻接数组的大小
+    unsigned int preSrc = 0;          // 记录前一个起始点
+    bool start = true;                // 表明图刚开始
 
-    // 读取度，偏移和边的信息
-    unsigned int offset = 0, degree = 0;
-    unsigned int src = 0, dst = 0, preSrc = -1;
-    bool isFirst = true;
-
-    while (fileIn >> src >> dst)
+    while (fileIn >> src >> dst) // 每读取一条边
     {
-
-        if (src != preSrc)
+        unsigned int a = max(src, dst) + 1;
+        if (a > maxCount) // 更新顶点最大id
         {
-            offsets[src] = offset;
-            if (!isFirst)
-            {
-                degrees[preSrc] = degree;
-                degree = 0;
-            }
-            isFirst = false;
-            preSrc = src;
+            degrees.resize(a,0);
+            offsets.resize(a,0);
+            maxCount = a;
         }
-        adjs.push_back(dst);
-        offset++;
+
+        // 将邻接点压入邻接数组
+        adjs.emplace_back(dst);
+        // 判断是否要存储度
+        if (start)
+        {
+            preSrc = src;
+            start = false;
+        }
+        else if (preSrc != src)
+        {
+            degrees[preSrc] = degree;
+            offsets[preSrc] = cur - degree;
+            preSrc = src;
+            degree = 0;
+        }
+        // 度数加一
         degree++;
+        cur++;
     }
-    degrees[src] = degree;
-    edge = adjs.size();
+    degrees[preSrc] = degree;
+    offsets[preSrc] = cur - degree;
+    vertex = maxCount;
+    edge = cur;
+    // 关闭文件
     fileIn.close();
 
-    //开始写入文件
+    // 开始写入文件
     std::cout << "读取完毕，开始写入文件" << std::endl;
-    ParallelWriteStdGraph(fileDir,vertex,edge,degrees,offsets,adjs);
+    ParallelWriteStdGraph(fileDir, vertex, edge, degrees, offsets, adjs);
     return true;
 }

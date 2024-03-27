@@ -20,7 +20,7 @@ private:
     std::vector<unsigned int> degrees; // 存储顶点度数
     std::vector<unsigned int> offsets;  // 存储顶点在p_edges当中的起始位置
     std::vector<unsigned int> adjs;   // 存储邻接点
-
+    std::string fileName;   //图的名字
     /*图的一些属性*/
     double avgDeg; // 平均度
 
