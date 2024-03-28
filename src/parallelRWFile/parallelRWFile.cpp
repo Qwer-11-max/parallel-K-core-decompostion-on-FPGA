@@ -102,7 +102,7 @@ bool ParallelReadStdGraph(string &fileDir, unsigned int &vertex, unsigned int &e
     fileKeyInfo >> vertex >> edge;
     fileKeyInfo.close();
     degrees.resize(vertex);
-    offsets.resize(vertex);
+    offsets.resize(vertex + 1);
     adjs.resize(edge);
 
     //=======调用线程池写入文件========

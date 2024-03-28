@@ -8,64 +8,8 @@
 #include "threadPool.h"
 #include "configure.h"
 
-/// @brief 互斥队列，可以原子化的操作队列
-/// @tparam T 队列的数据类型
-template <typename T>
-class MutexVector
-{
-private:
-    mutable std::shared_mutex sMutex;
-    std::queue<T> q;
-
-public:
-    MutexVector(){};
-    /// @brief 获取队列的长度
-    /// @return 队列长度
-    inline int size()
-    {
-        std::shared_lock<std::shared_mutex> lock(sMutex);
-        return q.size();
-    }
-
-    /// @brief 队列是否为空
-    /// @return 队列为空返回Ture，否则返回false
-    inline bool empty()
-    {
-        std::shared_lock<std::shared_mutex> lock(sMutex);
-        return q.empty();
-    }
-
-    /// @brief 重置队列的长度
-    /// @param n 队列的新长度
-    inline void resize(int n)
-    {
-        std::unique_lock<std::shared_mutex> lock(sMutex);
-        q.resize(n);
-    }
-
-    /// @brief 向队列中插入元素
-    /// @param t 要插入的元素
-    inline void enQueue(T &t)
-    {
-        std::unique_lock<std::shared_mutex> lock(sMutex);
-        q.push(t);
-    }
-
-    /// @brief 从队列中获取一个元素
-    /// @param 从队列中取出的元素
-    /// @return 成功取出返回true，否则返回false
-    inline bool deQueue(T &t)
-    {
-        std::unique_lock<std::shared_mutex> lock(sMutex);
-
-        if (q.empty())
-            return false;
-
-        t = std::move(q.front());
-        q.pop();
-        return true;
-    }
-};
+/// @file PKC.cpp
+/// @attention 使用循环剥离的方法来对图进行分解，循环剥离即在每一次迭代中剥离度数为k的顶点，直到没有被剥离的顶点为止，进入下一个循环
 
 /// @brief 将度数小于k的顶点放到waitForProcess数组中等待loop的处理
 /// @param degrees 顶点的度数集
@@ -74,7 +18,7 @@ public:
 /// @param waitQueue 等待处理的顶点队列
 /// @param id 进程id号
 /// @param hardwareCount 线程总数
-int ScanGraph(std::vector<MutexVector<unsigned int>> &waitQueue,
+int ScanGraph(std::vector<SafeQueue<unsigned int>> &waitQueue,
               std::vector<std::atomic_uint> &degrees, std::vector<std::atomic_bool> &processed, int k, unsigned int id, int hardwareCount)
 {
     //======逐个扫描顶点的度数，将度<=k的顶点放入待处理队列=======
@@ -88,10 +32,19 @@ int ScanGraph(std::vector<MutexVector<unsigned int>> &waitQueue,
     return 1;
 }
 
-int loopGraph(MutexVector<unsigned int> &coreVertexs,
-              int k, int id, std::vector<MutexVector<unsigned int>> &waitVector, std::vector<std::atomic_bool> &processed,
-              std::vector<std::atomic_uint> &atomicDegrees, std::vector<unsigned int> &offsets, std::vector<unsigned int> &adjs,
-              std::vector<unsigned int> &degrees)
+/// @brief 处理等待队列中的顶点，处理后将processed[]中相应位置置为true
+/// @param coreVertexs 存储处理后顶点的数组
+/// @param k k-core中的k
+/// @param id 线程id
+/// @param waitVector 等待队列
+/// @param processed 被处理标志
+/// @param atomicDegrees 能够原子操作的顶点度数组
+/// @param offsets 顶点的第一个邻接点在adjs中的位置
+/// @param adjs 压缩后的邻接点数组
+/// @return 该函数处理的顶点数
+int loopGraph(SafeQueue<unsigned int> &coreVertexs,
+              int k, int id, std::vector<SafeQueue<unsigned int>> &waitVector, std::vector<std::atomic_bool> &processed,
+              std::vector<std::atomic_uint> &atomicDegrees, std::vector<unsigned int> &offsets, std::vector<unsigned int> &adjs)
 {
     //==========扫描各个等待队列，将符合条件的邻接点加入处理过的队列========
     int count = 0;
@@ -102,16 +55,14 @@ int loopGraph(MutexVector<unsigned int> &coreVertexs,
         waitVector[id].deQueue(num);
         coreVertexs.enQueue(num);
         processed[num].store(true);
-        unsigned int left = offsets[num];
-        for (unsigned int j = 0; j < degrees[num]; j++)
+        for (unsigned int j = offsets[num]; j < offsets[num + 1]; j++)
         {
-            unsigned int loc = j + left; // 邻接点在adjs中的位置
             // 邻接点未被处理过，且度数大于k，则其度数减一
-            if (!processed[adjs[loc]].load() &&atomicDegrees[adjs[loc]].load() > k)
+            if (!processed[adjs[j]].load() && atomicDegrees[adjs[j]].load() > k)
             {
-                unsigned int deg_u = atomicDegrees[adjs[loc]].fetch_sub(1);
+                unsigned int deg_u = atomicDegrees[adjs[j]].fetch_sub(1);
                 if (deg_u == k + 1)
-                    waitVector[id].enQueue(adjs[loc]);
+                    waitVector[id].enQueue(adjs[j]);
             }
         }
         count++;
@@ -128,9 +79,9 @@ bool Graph::PKC()
     {
         x.store(false);
     }
-    int hardwareCount = std::thread::hardware_concurrency();         // 查询硬件支持的线程数量
-    std::vector<MutexVector<unsigned int>> waitQueue(hardwareCount); // 等待处理的顶点队列，每个线程一个
-    std::vector<std::atomic_uint> atomicDegrees(vertex);             // 将degrees数组转换为可以原子操作的数组，方便多线程操作
+    int hardwareCount = std::thread::hardware_concurrency();       // 查询硬件支持的线程数量
+    std::vector<SafeQueue<unsigned int>> waitQueue(hardwareCount); // 等待处理的顶点队列，每个线程一个
+    std::vector<std::atomic_uint> atomicDegrees(vertex);           // 将degrees数组转换为可以原子操作的数组，方便多线程操作
     // 初始化原子变量
     for (int i = 0; i < vertex; i++)
     {
@@ -138,9 +89,9 @@ bool Graph::PKC()
     }
 
     std::vector<unsigned int> coreOffsets; // k阶核的起始位置
-    MutexVector<unsigned int> coreVertex;  // 存储核中的点
-    int k = 0;
-    unsigned int count = 0;
+    SafeQueue<unsigned int> coreVertex;    // 存储核中的点
+    int k = 0; //当前处理的k核
+    unsigned int count = 0; //处理过的顶点数量
     //=========并行进行k核分解===============
     ThreadPool pool(hardwareCount); // 创建一个有hardware_concurrency个工作线程的线程池
     pool.init();
@@ -164,7 +115,7 @@ bool Graph::PKC()
         {
             loop.emplace_back(pool.submit(loopGraph, std::ref(coreVertex), k, i,
                                           std::ref(waitQueue), std::ref(processed), std::ref(atomicDegrees),
-                                          std::ref(offsets), std::ref(adjs), std::ref(degrees)));
+                                          std::ref(offsets), std::ref(adjs)));
         }
         for (auto &x : loop)
         {
